@@ -1,0 +1,43 @@
+﻿body {
+	height: 1500px;
+	background-color:black;
+}
+
+.container-fluid {
+	background-color: beige;
+	height: 100px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.navbar {
+	background-color: black;
+	height: 80px;
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+}
+
+.navbar a {
+	color: white;
+	float: right;
+	font-size: 15px;
+	display: block;
+	margin: 28px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.navbar a:first-child {
+	float: left;
+	font-size: 40px;
+	font-weight: bold;
+	left: 100px;
+	margin: 10px;
+}
+
+.navbar a:hover {
+	color: darkseagreen;
+	text-decoration: none;
+}
