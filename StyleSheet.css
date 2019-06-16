@@ -1,13 +1,6 @@
 ﻿body {
 	height: 1500px;
-	background-color:black;
-}
-
-.container-fluid {
-	background-color: beige;
-	height: 100px;
-	overflow: hidden;
-	width: 100%;
+	background-color:white;
 }
 
 .navbar {
@@ -33,11 +26,20 @@
 	float: left;
 	font-size: 40px;
 	font-weight: bold;
-	left: 100px;
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
 }
 
 .navbar a:hover {
 	color: darkseagreen;
 	text-decoration: none;
+}
+
+#main-container {
+	background-color: darkgray;
+	height: 100px;
+	margin-top: 80px;
+	overflow: hidden;
+	width: 100%;
 }
