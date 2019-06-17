@@ -31,10 +31,17 @@
 	margin-top: 55px;
 	min-height: 800px;
 	width: 100%;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	overflow: hidden;
+}
+
+#welcome-text {
+	background-color: unset;
+	color: #f9f9f9;
+	font-size: 50px;
+	margin-top: 0px;
+	margin-left: 100px;
+	position: absolute;
+	top: 10%;
+	left: -5%
 }
 
 #main-container {
