@@ -3,7 +3,7 @@
 	background-color:white;
 }
 
-.navbar {
+/*.navbar {
 	background-color: black;
 	height: 80px;
 	overflow: hidden;
@@ -34,7 +34,7 @@
 .navbar a:hover {
 	color: darkseagreen;
 	text-decoration: none;
-}
+}*/
 
 #main-container {
 	background-color: darkgray;
