@@ -53,6 +53,10 @@
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
 	animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-webkit-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-moz-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-ms-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-o-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
 }
 
 #typed-text2 {
@@ -71,7 +75,15 @@
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
 	animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-webkit-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-moz-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-ms-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-o-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
 	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-ms-animation-delay: 1s;
+	-o-animation-delay: 1s;
 }
 
 #typed-text3 {
@@ -89,8 +101,15 @@
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
-	animation: typing 4.5s steps(45, end), blink-caret .75s step-end infinite;
+	-webkit-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-moz-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-ms-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	-o-animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
 	animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-ms-animation-delay: 2s;
+	-o-animation-delay: 2s;
 }
 
 #welcome-text1 {
@@ -104,6 +123,10 @@
 	visibility: visible;
 	letter-spacing: .15em; /* Adjust as needed */
 	animation: hide 2.5s;
+	-webkit-animation: hide 2.5s;
+	-moz-animation: hide 2.5s;
+	-ms-animation: hide 2.5s;
+	-o-animation: hide 2.5s;
 }
 
 #welcome-text2 {
@@ -118,6 +141,10 @@
 	white-space: nowrap; /* Keeps the content on a single line */
 	letter-spacing: .15em; /* Adjust as needed */
 	animation: hide 3s;
+	-webkit-animation: hide 3s;
+	-moz-animation: hide 3s;
+	-ms-animation: hide 3s;
+	-o-animation: hide 3s;
 }
 
 #welcome-text3 {
@@ -132,10 +159,84 @@
 	white-space: nowrap; /* Keeps the content on a single line */
 	letter-spacing: .15em; /* Adjust as needed */
 	animation: hide 3.5s;
+	-webkit-animation: hide 3.5s;
+	-moz-animation: hide 3.5s;
+	-ms-animation: hide 3.5s;
+	-o-animation: hide 3.5s;
 }
 
 /* The typing effect */
 @keyframes typing {
+	0% {
+		visibility: visible;
+	}
+
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes typing {
+	0% {
+		visibility: visible;
+	}
+
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+@-webkit-keyframes typing {
+	0% {
+		visibility: visible;
+	}
+
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+@-moz-keyframes typing {
+	0% {
+		visibility: visible;
+	}
+
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+@-ms-keyframes typing {
+	0% {
+		visibility: visible;
+	}
+
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+@-o-keyframes typing {
 	0% {
 		visibility: visible;
 	}
@@ -160,6 +261,47 @@
 	}
 }
 
+@-webkit-keyframes blink-caret {
+	from, to {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: #f9f9f9;
+	}
+}
+
+@-moz-keyframes blink-caret {
+	from, to {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: #f9f9f9;
+	}
+}
+
+@-ms-keyframes blink-caret {
+	from, to {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: #f9f9f9;
+	}
+}
+
+@-o-keyframes blink-caret {
+	from, to {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: #f9f9f9;
+	}
+}
+
+/*Hides visible words while typing is animated*/
 @keyframes hide {
 	from, to {
 		visibility: hidden;
@@ -167,6 +309,29 @@
 	
 }
 
+@-webkit-keyframes hide {
+	from, to {
+		visibility: hidden;
+	}
+}
+
+@-moz-keyframes hide {
+	from, to {
+		visibility: hidden;
+	}
+}
+
+@-ms-keyframes hide {
+	from, to {
+		visibility: hidden;
+	}
+}
+
+@-o-keyframes hide {
+	from, to {
+		visibility: hidden;
+	}
+}
 
 #main-container {
 	background-color: antiquewhite;
