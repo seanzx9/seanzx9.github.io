@@ -3,10 +3,12 @@
 	background-color:white;
 }
 
+$navbar-default-bg: red;
+
 #main-container {
 	background-color: darkgray;
 	height: 100px;
-	margin-top: 70px;
+	margin-top: 55px;
 	overflow: hidden;
 	width: 100%;
 }
