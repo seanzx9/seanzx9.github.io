@@ -3,7 +3,8 @@
 	background-color:white;
 }
 
-$navbar-default-bg: red;
+.navbar {
+}
 
 #main-container {
 	background-color: darkgray;
