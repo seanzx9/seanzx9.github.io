@@ -35,12 +35,12 @@
 
 #typed-text1 {
 	background-color: transparent;
-	color: #f9f9f9;
+	color: #ffffff;
 	font-size: 50px;
 	position: absolute;
 	top: 70px;
 	left: 0px;
-	max-width: 270px;
+	max-width: 275px;
 	/*For typing effect*/
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
 	visibility: hidden;
@@ -48,12 +48,12 @@
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
-	animation: typing 2.5s steps(45, end), blink-caret .75s step-end infinite;
+	animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
 }
 
 #typed-text2 {
 	background-color: transparent;
-	color: #f9f9f9;
+	color: #ffffff;
 	font-size: 50px;
 	position: absolute;
 	top: 160px;
@@ -66,18 +66,18 @@
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
-	animation: typing 2.5s steps(45, end), blink-caret .75s step-end infinite;
-	animation-delay: 2.5s;
+	animation: typing 2.5s steps(45, end), blink-caret .75s step-end;
+	animation-delay: 1s;
 }
 
 #typed-text3 {
 	background-color: transparent;
-	color: #f9f9f9;
+	color: #ffffff;
 	font-size: 50px;
 	position: absolute;
 	top: 250px;
 	left: 0px;
-	max-width: 250px;
+	max-width: 255px;
 	/*For typing effect*/
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
 	visibility: hidden;
@@ -85,18 +85,18 @@
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
-	animation: typing 2.5s steps(45, end), blink-caret .75s step-end infinite;
-	animation-delay: 5s;
+	animation: typing 4.5s steps(45, end), blink-caret .75s step-end infinite;
+	animation-delay: 2s;
 }
 
 #welcome-text1 {
 	background-color: transparent;
-	color: #f9f9f9;
+	color: #ffffff;
 	font-size: 50px;
 	position: absolute;
 	top: 70px;
 	left: 0px;
-	max-width: 270px;
+	max-width: 275px;
 	visibility: visible;
 	letter-spacing: .15em; /* Adjust as needed */
 	animation: hide 2.5s;
@@ -104,30 +104,30 @@
 
 #welcome-text2 {
 	background-color: transparent;
-	color: #f9f9f9;
+	color: #ffffff;
 	font-size: 50px;
 	position: absolute;
 	top: 160px;
 	left: 0px;
-	max-width: 180px;
+	max-width: 185px;
 	visibility: visible;
 	white-space: nowrap; /* Keeps the content on a single line */
 	letter-spacing: .15em; /* Adjust as needed */
-	animation: hide 5s;
+	animation: hide 3s;
 }
 
 #welcome-text3 {
 	background-color: transparent;
-	color: #f9f9f9;
+	color: #ffffff;
 	font-size: 50px;
 	position: absolute;
 	top: 250px;
 	left: 0px;
-	max-width: 250px;
+	max-width: 255px;
 	visibility: visible;
 	white-space: nowrap; /* Keeps the content on a single line */
 	letter-spacing: .15em; /* Adjust as needed */
-	animation: hide 6s;
+	animation: hide 3.5s;
 }
 
 /* The typing effect */
