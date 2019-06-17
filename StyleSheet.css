@@ -10,6 +10,7 @@
 #main-container {
 	background-color: darkgray;
 	height: 100px;
+	margin-top: 40px;
 	overflow: hidden;
 	width: 100%;
 }
