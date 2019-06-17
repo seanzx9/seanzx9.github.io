@@ -31,6 +31,10 @@
 	margin-top: 55px;
 	min-height: 800px;
 	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	overflow: hidden;
 }
 
 #main-container {
