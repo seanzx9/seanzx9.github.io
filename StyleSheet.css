@@ -33,16 +33,74 @@
 	width: 100%;
 }
 
-#welcome-text {
-	background-color: unset;
+#welcome-text1 {
+	background-color: transparent;
 	color: #f9f9f9;
 	font-size: 50px;
-	margin-top: 0px;
-	margin-left: 100px;
 	position: absolute;
-	top: 10%;
-	left: -5%
+	top: 60px;
+	left: 0px;
+	max-width: 290px;
+	/*For typing effect*/
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	visibility: hidden;
+	border-right: 5px solid transparent; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: typing 4.5s steps(45, end), blink-caret .75s step-end infinite;
+	animation-iteration-count: infinite;
 }
+
+#welcome-text2 {
+	background-color: transparent;
+	color: #f9f9f9;
+	font-size: 50px;
+	position: absolute;
+	top: 120px;
+	left: 0px;
+	max-width: 610px;
+	/*For typing effect*/
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	visibility: hidden;
+	border-right: 5px solid transparent; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: delay 2s infinite, typing 4.5s steps(45, end), blink-caret .75s step-end infinite;
+	animation-iteration-count: infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+	0% {
+		visibility: visible;
+	}
+
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from, to {
+		border-color: transparent
+	}
+
+	50% {
+		border-color: #f9f9f9;
+	}
+}
+
+@keyframes delay {
+	/*Adds wait time*/
+}
+
 
 #main-container {
 	background-color: antiquewhite;
@@ -50,4 +108,3 @@
 	width: 100%;
 }
 
-	
