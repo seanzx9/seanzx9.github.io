@@ -1,14 +1,4 @@
-﻿html {
-	background: url("nycBackground.jpg") no-repeat center center fixed;
-	/*-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;*/
-	background-size: cover;
-	height: 100%;
-	overflow: hidden;
-}
-
-body {
+﻿body {
 	height: 1500px;
 	background-color:white;
 }
