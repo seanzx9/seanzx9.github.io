@@ -330,7 +330,7 @@
 	color: #f3f3f3;
 }
 
-#first-parallax, #second-parallax, #third-parallax {
+#first-parallax, #second-parallax {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -339,17 +339,12 @@
 
 #first-parallax {
 	background-image: url("nyc.jpg");
-	min-height: 800px;
+	min-height: 100vh;
 }
 
 #second-parallax {
-	background-image: url("galaxy.jpg");
-	min-height: 500px;
-}
-
-#third-parallax {
 	background-image: url("nyc.jpg");
-	min-height: 800px;
+	min-height: 100vh;
 }
 
 #main-container {
