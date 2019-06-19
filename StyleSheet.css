@@ -1,6 +1,7 @@
-﻿body {
+﻿body, html {
 	background-color: #d6d6d6;
 	font: 400 15px/1.8 "Lato", sans-serif;
+	height: 100%;
 }
 
 .navbar-dark {
