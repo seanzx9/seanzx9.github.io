@@ -339,12 +339,14 @@
 
 #first-parallax {
 	background-image: url("nyc.jpg");
-	min-height: 100vh;
+	height: 100vh;
+	min-height: 350px;
 }
 
 #second-parallax {
 	background-image: url("nyc.jpg");
-	min-height: 100vh;
+	height: 100vh;
+	min-height: 350px;
 }
 
 #main-container {
