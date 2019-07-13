@@ -28,13 +28,6 @@
 	float: right;
 }
 
-/*Turn off parallax for tablets and phones*/
-@media only screen and (max-device-width: 1366px) {
-	.parallax {
-		background-attachment: scroll;
-	}
-}
-
 #first-parallax, #second-parallax {
 	background-attachment: fixed;
 	background-position: center;
@@ -49,7 +42,7 @@
 	background-image: url("img/nyc.jpg");
 	height: 100vh;
 	min-height: 350px;
-	padding-top: 35vh;
+	padding-top: 25vh;
 }
 
 #second-parallax {
