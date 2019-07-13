@@ -40,15 +40,16 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	color: #ffffff;
+	color: #65a4db;
 	font-size: 50px;
+	text-align: center;
 }
 
 #first-parallax {
 	background-image: url("img/nyc.jpg");
 	height: 100vh;
 	min-height: 350px;
-	padding-top: 60px;
+	padding-top: 30vh;
 }
 
 #second-parallax {
@@ -61,10 +62,6 @@
 	background-color: darkslategray;
 	margin-top: 55px;
 	width: 100%;
-}
-
-#welcome-text {
-
 }
 
 #quote {
