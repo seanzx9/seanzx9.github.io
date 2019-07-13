@@ -40,7 +40,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	color: #65a4db;
+	color: #062c48;
 	font-size: 50px;
 	text-align: center;
 }
@@ -49,7 +49,7 @@
 	background-image: url("img/nyc.jpg");
 	height: 100vh;
 	min-height: 350px;
-	padding-top: 30vh;
+	padding-top: 35vh;
 }
 
 #second-parallax {
