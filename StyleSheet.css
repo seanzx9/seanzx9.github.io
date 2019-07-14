@@ -52,16 +52,19 @@
 }
 
 #main-container {
-	background-color: darkslategray;
-	margin-top: 55px;
+	background-color: #d6d6d6;
+	margin-top: 40vh;
+	text-align: center;
 	width: 100%;
 }
 
-#quote {
+#middle-block {
 	background-color: #062c48;
+	min-height: 300px;
 }
 
 .blockquote {
+	background-color: #062c48;
 	color: #ffffff;
 	padding: 60px;
 	text-align: center;
