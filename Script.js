@@ -11,7 +11,7 @@ function welcomeMessage() {
 
 function typeHello() {
     if (i < hello.length) {
-        document.getElementById("first-parallax").innerHTML += hello.charAt(i);
+        document.getElementById("home").innerHTML += hello.charAt(i);
         i++;
         setTimeout(typeHello, 100);
     }
@@ -19,7 +19,7 @@ function typeHello() {
 
 function typeName() {
     if (j < name.length) {
-        document.getElementById("first-parallax").innerHTML += name.charAt(j);
+        document.getElementById("home").innerHTML += name.charAt(j);
         j++;
         setTimeout(typeName, 100);
     }

@@ -28,7 +28,54 @@
 	float: right;
 }
 
-#first-parallax, #second-parallax {
+/*for home page*/
+#home {
+	background-image: url("img/nyc.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #062c48;
+	font-size: 50px;
+	height: 100vh;
+	min-height: 350px;
+	padding-top: 26vh;
+	text-align: center;
+}
+
+#main-container {
+	background-color: #d6d6d6;
+	margin-top: 40vh;
+	text-align: center;
+	width: 100%;
+}
+
+#footer {
+	background-color: transparent;
+	bottom: 0;
+	color: #ffffff;
+	min-height: 40px;
+	opacity: 0.85;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+}
+
+#footer-ul {
+	list-style-type: none;
+	margin-left: 42.5vw;
+	text-decoration: none;
+}
+
+#footer-li {
+	display: inline;
+	padding: 10px;
+}
+
+#footer-text {
+	text-align: center;
+}
+
+/*#first-parallax, #second-parallax {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -49,27 +96,4 @@
 	background-image: url("img/nyc.jpg");
 	height: 100vh;
 	min-height: 350px;
-}
-
-#main-container {
-	background-color: #d6d6d6;
-	margin-top: 40vh;
-	text-align: center;
-	width: 100%;
-}
-
-#middle-block {
-	background-color: #062c48;
-	min-height: 300px;
-}
-
-.blockquote {
-	background-color: #062c48;
-	color: #ffffff;
-	padding: 60px;
-	text-align: center;
-}
-
-.blockquote-footer {
-	color: #f3f3f3;
-}
+}*/
