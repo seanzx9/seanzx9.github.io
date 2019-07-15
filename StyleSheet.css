@@ -61,14 +61,15 @@
 }
 
 #footer-ul {
+	display: table;
 	list-style-type: none;
-	margin-left: 42.5vw;
+	margin: 0 40.5%;
 	text-decoration: none;
 }
 
 #footer-li {
-	display: inline;
-	padding: 10px;
+	display: inline-block;
+	padding: 15px 15px;
 }
 
 #footer-text {
