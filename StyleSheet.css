@@ -53,23 +53,24 @@
 	background-color: transparent;
 	bottom: 0;
 	color: #ffffff;
-	min-height: 40px;
+	display: table;
+	min-height: 50px;
 	opacity: 0.85;
 	overflow: hidden;
 	position: fixed;
+	text-align: center;
 	width: 100%;
 }
 
 #footer-ul {
-	display: table;
 	list-style-type: none;
-	margin: 0 auto;
 	text-decoration: none;
+	padding: 0 0 0 1vw;
 }
 
 #footer-li {
 	display: inline-block;
-	padding: 15px 15px;
+	padding: 10px;
 }
 
 #footer-text {
