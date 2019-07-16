@@ -42,10 +42,9 @@ function emailMouseOver() {
 
     email.style.opacity = "1";
     linkedin.style.opacity = "0.5";
-    email.style.height = "43px";
-    email.style.width = "43px";
-    linkedin.style.height = "37px";
-    linkedin.style.width = "37px";
+    linkedin.style.height = "35px";
+    linkedin.style.width = "35px";
+    linkedin.style.marginLeft = "5px";
 }
 
 function linkedinMouseOver() {
@@ -54,10 +53,9 @@ function linkedinMouseOver() {
 
     email.style.opacity = "0.5";
     linkedin.style.opacity = "1";
-    email.style.height = "37px";
-    email.style.width = "37px";
-    linkedin.style.height = "43px";
-    linkedin.style.width = "43px";
+    email.style.height = "35px";
+    email.style.width = "35px";
+    email.style.marginLeft = "5px";
 }
 
 function mouseOut() {
@@ -70,6 +68,8 @@ function mouseOut() {
     email.style.width = "40px";
     linkedin.style.height = "40px";
     linkedin.style.width = "40px";
+    linkedin.style.marginLeft = "0px";
+    email.style.marginLeft = "0px";
 }
 
 
