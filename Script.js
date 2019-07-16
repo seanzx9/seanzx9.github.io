@@ -26,50 +26,68 @@ function typeName() {
 }
 
 //footer animation
+var e = 0;
+var emailOpac = 0.9;
+var emailFaded = false;
+var l = 0;
+var linkedinOpac = 0.9;
+var linkedinFaded = false;
+
 window.onload = function () {
     var email = document.getElementById("email-icon");
     var linkedin = document.getElementById("linkedin-icon");
 
-    email.addEventListener("mouseover", emailMouseOver);
-    email.addEventListener("mouseout", mouseOut);
-    linkedin.addEventListener("mouseover", linkedinMouseOver);
-    linkedin.addEventListener("mouseout", mouseOut);
+    email.addEventListener("mouseover", linkedinOut);
+    email.addEventListener("mouseout", linkedinIn);
+    linkedin.addEventListener("mouseover", emailOut);
+    linkedin.addEventListener("mouseout", emailIn);
 }
 
-function emailMouseOver() {
-    var email = document.getElementById("email-icon");
+function linkedinOut() {
     var linkedin = document.getElementById("linkedin-icon");
 
-    email.style.opacity = "1";
-    linkedin.style.opacity = "0.5";
-    email.style.height = "42px";
-    email.style.width = "42px";
-    linkedin.style.marginLeft = "1px";
+    if (l < 50 && linkedinFaded == false) {
+        linkedin.style.opacity = linkedinOpac;
+        linkedinOpac -= 0.01;
+        l++;
+        setTimeout(linkedinOut, 5);
+    }
+    if (l == 50) {
+        linkedinFaded = true;
+    }
 }
 
-function linkedinMouseOver() {
-    var email = document.getElementById("email-icon");
+function linkedinIn() {
     var linkedin = document.getElementById("linkedin-icon");
 
-    email.style.opacity = "0.5";
-    linkedin.style.opacity = "1";
-    linkedin.style.height = "42px";
-    linkedin.style.width = "42px";
-    email.style.marginRight = "1px";
+    l = 0;
+    linkedinOpac = 0.9;
+    linkedin.style.opacity = linkedinOpac;
+    linkedinFaded = false;
 }
 
-function mouseOut() {
+function emailOut() {
     var email = document.getElementById("email-icon");
-    var linkedin = document.getElementById("linkedin-icon");
 
-    email.style.opacity = "0.9";
-    linkedin.style.opacity = "0.9";
-    email.style.height = "40px";
-    email.style.width = "40px";
-    linkedin.style.height = "40px";
-    linkedin.style.width = "40px";
-    linkedin.style.marginLeft = "0px";
-    email.style.marginLeft = "0px";
+    if (e < 50 && emailFaded == false) {
+        email.style.opacity = emailOpac;
+        emailOpac -= 0.01;
+        e++;
+        setTimeout(emailOut, 5);
+    }
+    if (e == 50) {
+        linkedinFaded = true;
+    }
+}
+
+function emailIn() {
+    var email = document.getElementById("email-icon");
+
+    e = 0;
+    emailOpac = 0.9;
+    email.style.opacity = emailOpac;
+    emailFaded = false;
+
 }
 
 
