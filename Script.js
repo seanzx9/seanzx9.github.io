@@ -42,9 +42,9 @@ function emailMouseOver() {
 
     email.style.opacity = "1";
     linkedin.style.opacity = "0.5";
-    linkedin.style.height = "35px";
-    linkedin.style.width = "35px";
-    linkedin.style.marginLeft = "5px";
+    email.style.height = "42px";
+    email.style.width = "42px";
+    linkedin.style.marginLeft = "1px";
 }
 
 function linkedinMouseOver() {
@@ -53,9 +53,9 @@ function linkedinMouseOver() {
 
     email.style.opacity = "0.5";
     linkedin.style.opacity = "1";
-    email.style.height = "35px";
-    email.style.width = "35px";
-    email.style.marginLeft = "5px";
+    linkedin.style.height = "42px";
+    linkedin.style.width = "42px";
+    email.style.marginRight = "1px";
 }
 
 function mouseOut() {
