@@ -4,6 +4,15 @@ var j = 0;
 var hello = " Hello.";
 var name = " I'm Sean.";
 
+//footer animation
+var e = 0;
+var emailOpac = 0.9;
+var emailFaded = false;
+var l = 0;
+var linkedinOpac = 0.9;
+var linkedinFaded = false;
+
+//hello typing effect
 function welcomeMessage() {
     typeHello();
     setTimeout(typeName, 1500);
@@ -26,68 +35,48 @@ function typeName() {
 }
 
 //footer animation
-var e = 0;
-var emailOpac = 0.9;
-var emailFaded = false;
-var l = 0;
-var linkedinOpac = 0.9;
-var linkedinFaded = false;
-
 window.onload = function () {
     var email = document.getElementById("email-icon");
     var linkedin = document.getElementById("linkedin-icon");
 
-    email.addEventListener("mouseover", linkedinOut);
-    email.addEventListener("mouseout", linkedinIn);
-    linkedin.addEventListener("mouseover", emailOut);
-    linkedin.addEventListener("mouseout", emailIn);
-}
-
-function linkedinOut() {
-    var linkedin = document.getElementById("linkedin-icon");
-
-    if (l < 50 && linkedinFaded == false) {
+    //fades linkedin logo when mouse on email logo
+    email.addEventListener("mouseover", function linFade(){
+        if (linkedinFaded == false) {
+            linkedin.style.opacity = linkedinOpac;
+            linkedinOpac -= 0.01;
+            l++;
+            setTimeout(linFade, 1);
+        }
+        if (l == 50) {
+            linkedinFaded = true;
+        }
+    });
+    //makes linkedin logo solid when mouse out
+    email.addEventListener("mouseout", function linIn() {
+        linkedinFaded = false;
+        l = 0;
+        linkedinOpac = 0.9;
         linkedin.style.opacity = linkedinOpac;
-        linkedinOpac -= 0.01;
-        l++;
-        setTimeout(linkedinOut, 5);
-    }
-    if (l == 50) {
-        linkedinFaded = true;
-    }
-}
-
-function linkedinIn() {
-    var linkedin = document.getElementById("linkedin-icon");
-
-    l = 0;
-    linkedinOpac = 0.9;
-    linkedin.style.opacity = linkedinOpac;
-    linkedinFaded = false;
-}
-
-function emailOut() {
-    var email = document.getElementById("email-icon");
-
-    if (e < 50 && emailFaded == false) {
+    });
+    //makes email logo fade when mouse on linkedin logo
+    linkedin.addEventListener("mouseover", function emailOut(){
+        if (emailFaded == false) {
+            email.style.opacity = emailOpac;
+            emailOpac -= 0.01;
+            e++;
+            setTimeout(emailOut, 5);
+        }
+        if (e == 50) {
+            emailFaded = true;
+        }
+    });
+    //makes email logo solid when mouse out
+    linkedin.addEventListener("mouseout", function emailIn(){
+        emailFaded = false;
+        e = 0;
+        emailOpac = 0.9;
         email.style.opacity = emailOpac;
-        emailOpac -= 0.01;
-        e++;
-        setTimeout(emailOut, 5);
-    }
-    if (e == 50) {
-        linkedinFaded = true;
-    }
-}
-
-function emailIn() {
-    var email = document.getElementById("email-icon");
-
-    e = 0;
-    emailOpac = 0.9;
-    email.style.opacity = emailOpac;
-    emailFaded = false;
-
+    });
 }
 
 
