@@ -6,6 +6,7 @@
 
 .navbar-dark {
 	background-color: transparent;
+	background-image: linear-gradient(rgba(0,0,0,0.15), transparent);
 	color: #062c48;
 	font-size: 20px;
 }
@@ -21,7 +22,8 @@
 	color: #d6d6d6;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a {
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link, 
+.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a {
     color: #062c48;
 }
 .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover,
@@ -31,8 +33,8 @@
 }
 
 .navbar-dark .navbar-toggler-icon {
-		background-image: url("/img/toggle.png");
-	}
+	background-image: url("/img/toggle.png");
+}
 
 #collapsableNavbar {
 	float: right;
