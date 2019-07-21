@@ -46,8 +46,7 @@
 
 /*under construction page*/
 #construction {
-	background-color: #000000;
-	background-repeat: no-repeat;
+	background-color: #ffffff;
 	height: 100vh;
 	width: 100%;
 }
@@ -56,8 +55,8 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 35vh;
-	width: 50%;
+	padding-top: 27vh;
+	width: 300px;
 }
 
 /*for home page*/
