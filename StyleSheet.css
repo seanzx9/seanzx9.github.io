@@ -6,7 +6,7 @@
 
 .navbar-dark {
 	background-color: transparent;
-	background-image: linear-gradient(rgba(0,0,0,0.15), transparent);
+	background-image: linear-gradient(rgba(0,0,0,0.2), transparent);
 	color: #062c48;
 	font-size: 20px;
 }
@@ -34,6 +34,10 @@
 
 .navbar-dark .navbar-toggler-icon {
 	background-image: url("/img/toggle.png");
+}
+
+.navbar-dark .navbar-toggler {
+	border-color: transparent;
 }
 
 #collapsableNavbar {
