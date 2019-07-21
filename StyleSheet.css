@@ -46,11 +46,18 @@
 
 /*under construction page*/
 #construction {
-	background-color: #d6d6d6;
-	color: #062c48;
-	margin-top: 40vh;
-	text-align: center;
+	background-color: #000000;
+	background-repeat: no-repeat;
+	height: 100vh;
 	width: 100%;
+}
+
+#construct-gif {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 35vh;
+	width: 50%;
 }
 
 /*for home page*/

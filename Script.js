@@ -28,6 +28,10 @@ function welcomeMessage() {
             typed = true;
         }
     }
+
+    //for mouse going over the welcome message or any click in the screen
+    txt.addEventListener("mouseover", reWrite);
+    document.addEventListener("click", reWrite);
 }
 
 //deletes hello and retypes new welcome message
@@ -54,15 +58,10 @@ function reWrite() {
     }
 }
 
-//waits for page to be loaded and then adds listeners
+//waits for page to be loaded and then adds listeners for footer
 window.onload = function () {
-    var txt = document.getElementById("welcome-txt");
     var email = document.getElementById("email-icon");
     var linkedin = document.getElementById("linkedin-icon");
-
-    //for mouse going over the welcome message or any click in the screen
-    txt.addEventListener("mouseover", reWrite);
-    document.addEventListener("click", reWrite);
 
     //for hovering over email icon
     email.addEventListener("mouseover", function() {
