@@ -38,6 +38,10 @@ function welcomeMessage() {
 function reWrite() {
     var txt = document.getElementById("welcome-txt");
 
+    //removes listeners
+    txt.removeEventListener("mouseover", reWrite);
+    document.removeEventListener("click", reWrite);
+
     if (typed == true) {
         if (i > 0 && deleted == false) {
             i--;
@@ -56,26 +60,4 @@ function reWrite() {
             setTimeout(reWrite, 125);
         }
     }
-}
-
-//waits for page to be loaded and then adds listeners for footer
-window.onload = function () {
-    var email = document.getElementById("email-icon");
-    var linkedin = document.getElementById("linkedin-icon");
-
-    //for hovering over email icon
-    email.addEventListener("mouseover", function() {
-        email.style.filter = "invert(25%)";
-    });
-    email.addEventListener("mouseout", function() {
-        email.style.filter = "invert(0%)";
-    });
-
-    //for hovering over linkedin icon
-    linkedin.addEventListener("mouseover", function() {
-        linkedin.style.filter = "invert(25%)";
-    });
-    linkedin.addEventListener("mouseout", function() {
-        linkedin.style.filter = "invert(0%)";
-    });
 }

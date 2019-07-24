@@ -102,6 +102,15 @@
 	padding: 10px;
 }
 
+#email-icon, #linkedin-icon{
+	opacity: 0.9;
+	transition: 0.3s;
+}
+
+#email-icon:hover, #linkedin-icon:hover {
+	opacity: 0.6;
+}
+
 /*#first-parallax, #second-parallax {
 	background-attachment: fixed;
 	background-position: center;
