@@ -13,12 +13,45 @@ window.onload = function () {
     var line2 = document.getElementById("line2");
     var line1w = line1.clientWidth;
     var line2w = line2.clientWidth;
+    //about text
+    var about = document.getElementById("about-txt");
+    var index = 0;
+    var letter = -2;
+    var done = false;
+    var me = [
+        "Now just keep clicking :)",
+        "Let's make this short and sweet.",
+        "I'm a student at Stony Brook University.",
+        "I major in Computer Engineering.    and minor in Enviromental Design, Policy, and Planning.",
+        "In short, I just like tech and the environment.",
+        "You want more?",
+        "Well you can keep clicking to read more about me.",
+        "Or go ahead and click on the my projects link on the bottom left side of the screen.",
+        "So you want a little more about me.",
+        "My favorite color is green.",
+        "I practice mixed martial arts.",
+        "I enjoy playing soccer.",
+        "Mangos are my favorite fruit.",
+        "My workouts are 100% calisthenics.",
+        "Is that enough about me?",
+        "No?",
+        "Well feel free to contact me and we can talk some more!",
+        "Now go look at my projects.",
+        "I have no more to say here.",
+        "Really.",
+        "...",
+        "\"Life would be wonderful if people would leave you alone.\" - Charlie Chaplin",
+        "Ok I have no more.",
+        "For real this time.",
+        "Contact me!",
+        ""
+    ];
 
     //invoke typing 
     welcomeMessage();
 
     //types out message, sets typed to true when completed
-    function welcomeMessage () {
+    function welcomeMessage() {
         if (typed === false) {
             disableScrolling();
             if (i < 6) {
@@ -48,8 +81,8 @@ window.onload = function () {
         body.style.overflow = "hidden";
     }
 
-    function enableScrolling () {
-        body.style.overflow = "hidden";
+    function enableScrolling() {
+        body.style.overflow = "initial";
     }
 
     //shows moving arrow
@@ -152,4 +185,56 @@ window.onload = function () {
             }
         }
     }, 100);
+
+    about.addEventListener("click", intro);
+    function intro() {
+        if (index < me.length) {
+            if (letter === -2) {
+                about.removeEventListener("click", intro);
+                about.style.backgroundColor = "#e25b4b";
+                letter++;
+                setTimeout(intro, 500);
+            }
+            else if (letter === -1) {
+                about.style.backgroundColor = "transparent";
+                about.innerHTML = "";
+                letter++;
+                setTimeout(intro, 300);
+            }
+            else if (letter < me[index].length) {
+                //for major and minor
+                if (index === 3) {
+                    if (letter < 33) {
+                        about.innerHTML += me[index].charAt(letter);
+                        letter++;
+                        if (letter === 33)
+                            setTimeout(intro, 550);
+                        else
+                            setTimeout(intro, 80);
+                    }
+                    else if (letter === 33) {
+                        about.innerHTML = me[index].substring(0, 31);
+                        letter++;
+                        setTimeout(intro, 80);
+                    }
+                    else {
+                        about.innerHTML += me[index].charAt(letter);
+                        letter++;
+                        setTimeout(intro, 80);
+                    }
+                }
+                //everything else (normal messages)
+                else {
+                    about.innerHTML += me[index].charAt(letter);
+                    letter++;
+                    setTimeout(intro, 80);
+                }
+            }
+            else {
+                index++;
+                letter = -2;
+                about.addEventListener("click", intro);
+            }
+        }
+    }
 }
