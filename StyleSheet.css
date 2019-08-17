@@ -1,108 +1,226 @@
 ﻿body, html {
-	background-color: #d6d6d6;
-	font-family: 'Montserrat', sans-serif;
+	background-color: #bfd1d3;
+	color: #ecfdff;
+	font-family: 'Righteous', cursive;
+	font-size: 15px;
 	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 1;
 }
 
+/*navbar styling*/
 .navbar-dark {
 	background-color: transparent;
-	background-image: linear-gradient(rgba(0,0,0,0.2), transparent);
-	color: #062c48;
-	font-size: 20px;
-}
-
-.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand {
-	color: #062c48;
+	color: #ecfdff;
 	font-size: 25px;
-	font-weight: bold;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a{
-	color: #d6d6d6;
-}
-
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link, 
-.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a {
-    color: #062c48;
-}
-.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover,
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a:hover{
-	color: #0077c0;
-}
-
-.navbar-dark .navbar-toggler-icon {
-	background-image: url("/img/toggle.png");
-}
-
-.navbar-dark .navbar-toggler {
-	border-color: transparent;
-}
-
-#collapsableNavbar {
-	float: right;
-}
-
-/*under construction page*/
-#construction {
-	background-color: #ffffff;
-	height: 100vh;
-	width: 100%;
-}
-
-#construct-gif {
+#leo {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 27vh;
-	width: 300px;
+}
+
+.navbar-brand:hover .overlay {
+	width: 200px;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: transparent;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+}
+
+.text {
+	font-size: 40px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+
+/*color of the bottom navbar links*/
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a {
+	color: #ecfdff;
+}
+
+/*for hovering over navbar links*/
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+	color: #e25b4b;
+}
+
+#bottom-nav {
+	background-color: transparent;
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
 }
 
 /*for home page*/
 #home {
-	background-image: url("img/nyc.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: #062c48;
-	font-size: 50px;
+	background-color: #64778d;
+	font-size: 10vh;
 	height: 100vh;
 	min-height: 350px;
-	padding-top: 32vh;
-	text-align: center;
+	text-align: left;
+	position: relative;
+	z-index: -4;
 }
 
 #welcome-txt {
 	background-color: transparent;
-	margin: auto;
+	position: absolute;
+	top: 32%;
+}
+
+/*computer*/
+@media screen and (min-width : 769px) {
+	#line1 {
+		display: inline-block;
+		height: 100%;
+		border-top: 10px solid #e25b4b;
+		margin: 0;
+		position: absolute;
+		top: 40%;
+		width: 225px;
+		z-index: -1;
+	}
+
+	#line2 {
+		display: inline-block;
+		height: 100%;
+		border-top: 10px solid #e25b4b;
+		margin: 0;
+		position: absolute;
+		top: 55%;
+		width: 360px;
+		z-index: -1;
+	}
+
+	#arrow {
+		background-color: transparent;
+		bottom: 20px;
+		color: #e25b4b;
+		font-size: 230px;
+		position: absolute;
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		visibility: hidden;
+		margin: 0 auto;
+		width: 51.2%;
+	}
+
+	.h-md-100 {
+		height: 100vh;
+	}
+
+	/*#me-pic {
+		opacity: 0.9 ;
+		width: 25%;
+		height: auto;
+	}*/
+}
+
+/*mobile*/
+@media screen and (max-width: 768px) {
+	#line1 {
+		display: inline-block;
+		height: 100%;
+		border-top: 10px solid #e25b4b;
+		margin: 0;
+		position: absolute;
+		top: 40%;
+		width: 215px;
+		z-index: -1;
+	}
+
+	#line2 {
+		display: inline-block;
+		height: 100%;
+		border-top: 10px solid #e25b4b;
+		margin: 0;
+		position: absolute;
+		top: 55%;
+		width: 335px;
+		z-index: -1;
+	}
+
+	#arrow {
+		background-color: transparent;
+		bottom: 20px;
+		color: #e25b4b;
+		font-size: 230px;
+		position: absolute;
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		visibility: hidden;
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	#me-pic {
+		opacity: 0.9;
+		width: 50%;
+	}
+}
+
+
+#about {
+	background-color: #729799;
+	min-height: 100%;
+	padding: 20px 10px;
+	text-align: center;
+	z-index: 1;
+}
+
+#projects {
+	background-color: #bfd1d3;
+	color: #64778d;
+	min-height: 100%;
 }
 
 #footer {
-	background-color: transparent;
-	bottom: 0;
+	background-color: #565656;
+	margin-bottom: 0;
 	color: #ffffff;
 	display: table;
 	min-height: 50px;
 	opacity: 0.9;
 	overflow: hidden;
-	position: fixed;
+	position: relative;
 	text-align: center;
 	width: 100%;
 }
 
-#footer-ul {
+#contact-me {
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+.footer-ul {
 	list-style-type: none;
 	text-decoration: none;
 	padding: 0;
 }
 
-#footer-li {
+.footer-li {
 	display: inline-block;
 	padding: 10px;
 }
 
-#email-icon, #linkedin-icon{
+#email-icon, #linkedin-icon {
 	opacity: 0.9;
 	transition: 0.3s;
 }
@@ -110,26 +228,3 @@
 #email-icon:hover, #linkedin-icon:hover {
 	opacity: 0.6;
 }
-
-/*#first-parallax, #second-parallax {
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: #062c48;
-	font-size: 50px;
-	text-align: center;
-}
-
-#first-parallax {
-	background-image: url("img/nyc.jpg");
-	height: 100vh;
-	min-height: 350px;
-	padding-top: 25vh;
-}
-
-#second-parallax {
-	background-image: url("img/nyc.jpg");
-	height: 100vh;
-	min-height: 350px;
-}*/

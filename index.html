@@ -1,48 +1,90 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Sean Le</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!--favicon-->
+	<link rel="icon" href="/img/leo.png">
+
 	<!--Stylesheets-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="StyleSheet.css" />
+	<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="StyleSheet.css" />
 
 </head>
-<body>
 
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-		<a class="navbar-brand" href="index.html">Sean Le</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable-navbar" aria-controls="collapsable-navbar" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+<body data-spy="scroll" Data-target=".navbar" data-offset="50">
 
-		<div class="collapse navbar-collapse" id="collapsable-navbar">
-			<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-				<li class="nav-item">
-					<a class="nav-link" href="about.html">About Me </a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="projects.html">My Projects</a>
-				</li>
-			</ul>
-		</div>
+	<nav class="navbar fixed-top navbar-dark">
+		<a class="navbar-brand" href="index.html">
+			<img src="/img/leo.png" width="180" id="leo" alt="Sean Le">
+			<div class="overlay">
+				<div class="text">Sean Le</div>
+			</div>
+		</a>
 	</nav>
 
+
 	<div class="container-fluid" id="home">
-		<div class="container-fluid" id="welcome-txt"></div>
+		<span id="welcome-txt"></span>
+		<div id="line1"></div>
+		<div id="line2"></div>
+		<span id="arrow">^</span>
 	</div>
 
+	<div class="container-fluid" id="about">
+		<!--<div>
+			<img src="img/pfp.jpeg" class="rounded-circle shadow-lg" id="me-pic" />
+		</div>
+		<div>
+			<h1 class="display-3 lead">About Me</h1>
+			<h4>Name: Sean Le</h4>
+			<h4>College: Stony Brook University</h4>
+			<h4>Major: Computer Engineering</h4>
+		</div>-->
+		<div class="d-md-flex h-md-100 align-items-center">
+			<div class="col-md-6 p-0 bg-indigo h-md-100">
+				<div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+					<div class="logoarea pt-5 pb-5">
+						Under Construction
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 p-0 bg-white h-md-100 loginarea">
+				<div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" id="projects">
+		Under Construction
+	</div>
+
+	<nav class="navbar navbar-dark" id="bottom-nav">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#about">About Me</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#projects">My Projects</a>
+			</li>
+		</ul>
+	</nav>
+
 	<div id="footer" class="container-fluid">
-		<ul id="footer-ul">
-			<li id="footer-li">
+		<p id="contact-me">Contact Me!</p>
+		<ul class="footer-ul">
+			<li class="footer-li">
 				<a href="mailto: seanzx9@gmail.com" target="_blank">
 					<img id="email-icon" src="/img/email-logo.png" width="40" height="40">
 				</a>
 			</li>
-			<li id="footer-li">
+			<li class="footer-li">
 				<a href="https://www.linkedin.com/in/sean-le-93b988170/" target="_blank">
 					<img id="linkedin-icon" src="/img/linkedin-logo.png" width="40" height="40" />
 				</a>
@@ -52,11 +94,12 @@
 	</div>
 
 	<!--Javascript-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="Script.js"></script>
-	<script>welcomeMessage();</script>
+	<!-Smooth Scrolling in jquery for all browsers-->
+	<script src="smoothScroll.js"></script>
 
 </body>
 </html>
