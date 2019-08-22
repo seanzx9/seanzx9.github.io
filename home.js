@@ -32,11 +32,10 @@ window.onload = function () {
         "I practice mixed martial arts.",
         "I enjoy playing soccer.",
         "Mangos are my favorite fruit.",
-        "My workouts are 100% calisthenics.",
         "Is that enough about me?",
         "No?",
         "Well feel free to contact me and we can talk some more!",
-        "Now go look at my projects.",
+        "Now go check out my projects.",
         "I have no more to say here.",
         "Really.",
         "...",
@@ -47,8 +46,33 @@ window.onload = function () {
         ""
     ];
 
+    $(document).on("scroll", function () {
+        if ($(this).scrollTop() >= $('#me-pic').position().top) {
+            $('#me-pic').fadeIn(2000);
+            $('#about-txt').fadeIn(2000);
+        }
+    })
+
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+                window.location.hash = hash;
+            });
+        }
+    });
+
     //invoke typing 
     welcomeMessage();
+
+    //start at top of page
+    setTimeout(function () {
+        window.scrollTo(0, 0);
+    }, 1);
 
     //types out message, sets typed to true when completed
     function welcomeMessage() {
@@ -77,10 +101,12 @@ window.onload = function () {
         }
     }
 
+    //disables scrolling with overflow
     function disableScrolling() {
         body.style.overflow = "hidden";
     }
 
+    //enables scrolling with overflow
     function enableScrolling() {
         body.style.overflow = "initial";
     }
@@ -184,8 +210,9 @@ window.onload = function () {
                 line2.style.opacity = "1";
             }
         }
-    }, 100);
+    }, 1);
 
+    //goes through about me text
     about.addEventListener("click", intro);
     function intro() {
         if (index < me.length) {

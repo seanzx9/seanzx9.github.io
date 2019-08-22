@@ -1,5 +1,4 @@
 ﻿body, html {
-	background-color: #bfd1d3;
 	color: #ecfdff;
 	font-family: 'Righteous', cursive;
 	font-size: 15px;
@@ -14,10 +13,6 @@
 	background-color: transparent;
 	color: #ecfdff;
 	font-size: 25px;
-}
-
-#leo {
-	display: block;
 }
 
 .navbar-brand:hover .overlay {
@@ -35,17 +30,6 @@
 	width: 0;
 	height: 100%;
 	transition: .5s ease;
-}
-
-.text {
-	font-size: 40px;
-	position: absolute;
-	overflow: hidden;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	white-space: nowrap;
 }
 
 /*color of the bottom navbar links*/
@@ -87,6 +71,23 @@
 
 /*computer*/
 @media screen and (min-width : 769px) {
+	#leo {
+		display: block;
+		width: 200px;
+		height: auto;
+	}
+
+	.text {
+		font-size: 40px;
+		position: absolute;
+		overflow: hidden;
+		top: 50%;
+		left: 55%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		white-space: nowrap;
+	}
+
 	#line1 {
 		display: inline-block;
 		height: 100%;
@@ -122,24 +123,73 @@
 		width: 51.2%;
 	}
 
-	.h-md-100 {
-		height: 100vh;
-	}
-
 	#me-pic {
-		opacity: 0.9 ;
+		display: none;
+		opacity: 0.9;
 		width: 90%;
 		height: auto;
 	}
 
 	#about-txt {
 		background-color: transparent;
+		display: none;
 		font-size: 35px;
+	}
+
+	#projects-title {
+		border: 8px outset #e25b4b;
+		display: none;
+		font-size: 90px;
+		left: 250px;
+		overflow: hidden;
+		padding: 15px;
+		position: fixed;
+		text-align: left;
+		top: 250px;
+		width: auto;
+		max-width: 650px;
+	}
+
+	#projects-desc {
+		display: none;
+		font-size: 30px;
+		left: 255px;
+		overflow: hidden;
+		position: fixed;
+		text-align: left;
+		top: 450px;
+		width: 500px;
+	}
+
+	#projects-pic {
+		display: none;
+		right: 200px;
+		overflow: hidden;
+		position: fixed;
+		top: 50%;
+		transform: translate(0, -50%);
 	}
 }
 
 /*mobile*/
 @media screen and (max-width: 768px) {
+	#leo {
+		display: block;
+		width: 125px;
+		height: auto;
+	}
+
+	.text {
+		font-size: 30px;
+		position: absolute;
+		overflow: hidden;
+		top: 50%;
+		left: 35%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		white-space: nowrap;
+	}
+
 	#line1 {
 		display: inline-block;
 		height: 100%;
@@ -176,29 +226,65 @@
 	}
 
 	#me-pic {
+		display: none;
 		opacity: 0.9;
 		width: 85%;
+		height: auto;
 	}
 
 	#about-txt {
 		background-color: transparent;
+		display: none;
 		font-size: 20px;
+	}
+
+	#projects-title {
+		border: 4px outset #e25b4b;
+		display: none;
+		font-size: 40px;
+		left: 20px;
+		overflow: hidden;
+		padding: 5px;
+		position: fixed;
+		top: 150px;
+	}
+
+	#projects-desc {
+		display: none;
+		font-size: 20px;
+		left: 20px;
+		margin-right: 20px;
+		overflow: hidden;
+		position: fixed;
+		text-align: left;
+		top: 240px;
+	}
+
+	#projects-pic {
+		display: none;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+		position: fixed;
+		left: 20px;
+		top: 400px;
+		width: 90%;
 	}
 }
 
-
 #about {
 	background-color: #729799;
-	min-height: 110%;
-	padding: 20px 10px;
+	min-height: 100%;
+	padding: 7% 10px;
 	text-align: center;
 	z-index: 1;
 }
 
 #projects {
-	background-color: #bfd1d3;
-	color: #64778d;
-	min-height: 100%;
+	background-color: #64778d;
+	min-height: 500vh;
+	overflow: auto;
+	text-align: center;
 }
 
 #footer {
