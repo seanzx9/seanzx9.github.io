@@ -17,22 +17,19 @@ window.onload = function () {
     var about = document.getElementById("about-txt");
     var index = 0;
     var letter = -2;
-    var done = false;
     var me = [
-        "Now just keep clicking :)",
         "Let's make this short and sweet.",
         "I'm a student at Stony Brook University.",
-        "I major in Computer Engineering.    and minor in Enviromental Design, Policy, and Planning.",
-        "In short, I just like tech and the environment.",
-        "You want more?",
-        "Well you can keep clicking to read more about me.",
-        "Or go ahead and click on the my projects link on the bottom left side of the screen.",
-        "So you want a little more about me.",
-        "My favorite color is green.",
-        "I practice mixed martial arts.",
-        "I enjoy playing soccer.",
-        "Mangos are my favorite fruit.",
-        "Is that enough about me?",
+        "I major in Computer Engineering.  and minor in Enviromental Design, Policy, and Planning.",
+        "In short, I'm into tech and the environment.",
+        "Feel free to check out my projects!" +
+        "Or keep clicking/tapping...",
+        "A little more about me...",
+        "My favorite color is green." +
+        "I practice mixed martial arts." +
+        "I enjoy playing soccer." +
+        "Mangos are my favorite fruit." +
+        "Is that enough?",
         "No?",
         "Well feel free to contact me and we can talk some more!",
         "Now go check out my projects.",
@@ -43,13 +40,15 @@ window.onload = function () {
         "Ok I have no more.",
         "For real this time.",
         "Contact me!",
+        ":)",
         ""
     ];
-
+    
+    //fade in when scrolled to
     $(document).on("scroll", function () {
-        if ($(this).scrollTop() >= $('#me-pic').position().top) {
-            $('#me-pic').fadeIn(2000);
-            $('#about-txt').fadeIn(2000);
+        if ($(this).scrollTop() >= $('#me-pic').position().top + 300) {
+            $('#me-pic').fadeIn(1000);
+            $('#about-txt').fadeIn(1000);
         }
     })
 
@@ -213,50 +212,136 @@ window.onload = function () {
     }, 1);
 
     //goes through about me text
+    //letter goes to 2 to highlight background
+    //letter goes to 1 when deleting text
     about.addEventListener("click", intro);
     function intro() {
+        //loop through all off array
         if (index < me.length) {
+            //for highlighting text
             if (letter === -2) {
                 about.removeEventListener("click", intro);
                 about.style.backgroundColor = "#e25b4b";
                 letter++;
                 setTimeout(intro, 500);
             }
+            //for deleting text
             else if (letter === -1) {
                 about.style.backgroundColor = "transparent";
                 about.innerHTML = "";
                 letter++;
-                setTimeout(intro, 300);
+                setTimeout(intro, 400);
             }
+            //for typing effect
             else if (letter < me[index].length) {
-                //for major and minor
-                if (index === 3) {
-                    if (letter < 33) {
-                        about.innerHTML += me[index].charAt(letter);
-                        letter++;
-                        if (letter === 33)
-                            setTimeout(intro, 550);
-                        else
-                            setTimeout(intro, 80);
+                if (index === 0) {
+                    about.innerHTML += me[index].charAt(letter);
+                    letter++;
+                    if (letter === me[index].length) {
+                        index++;
+                        letter = -2;
+                        setTimeout(intro, 1500);
+                    }
+                    else
+                        setTimeout(intro, 80);
+                }
+                else if (index === 1) {
+                    about.innerHTML += me[index].charAt(letter);
+                    letter++;
+                    if (letter === me[index].length) {
+                        index++;
+                        letter = -2;
+                        setTimeout(intro, 1500);
+                    }
+                    else
+                        setTimeout(intro, 80);
+                }
+                //creates delay for major and minor
+                else if (index === 2) {
+                    about.innerHTML += me[index].charAt(letter);
+                    letter++;
+                    if (letter === 32) {
+                        setTimeout(intro, 700);
                     }
                     else if (letter === 33) {
-                        about.innerHTML = me[index].substring(0, 31);
-                        letter++;
-                        setTimeout(intro, 80);
+                        about.innerHTML = about.innerHTML.substring(0, 31);
+                        setTimeout(intro, 100);
                     }
-                    else {
-                        about.innerHTML += me[index].charAt(letter);
-                        letter++;
-                        setTimeout(intro, 80);
+                    else if (letter === me[index].length) {
+                        index++;
+                        letter = -2;
+                        setTimeout(intro, 1500);
                     }
+                    else
+                        setTimeout(intro, 80);
                 }
-                //everything else (normal messages)
+                //delay for brief summary
+                else if (index === 3) {
+                    about.innerHTML += me[index].charAt(letter);
+                    letter++;
+                    if (letter === 8) {
+                        setTimeout(intro, 400);
+                    }
+                    else if (letter === me[index].length) {
+                        index++;
+                        letter = -2;
+                        setTimeout(intro, 1600);
+                    }
+                    else
+                        setTimeout(intro, 80);
+                }
+                //continue about page or go to projects
+                else if (index === 4) {
+                    about.innerHTML += me[index].charAt(letter);
+                    letter++;
+                    if (letter === 35) {
+                        about.innerHTML += "<br/>";
+                        setTimeout(intro, 1500);
+                    }
+                    else
+                        setTimeout(intro, 80);
+                }
+                else if (index === 5) {
+                    about.innerHTML += me[index].charAt(letter);
+                    letter++;
+                    if (letter === me[index].length) {
+                        index++;
+                        letter = -2;
+                        setTimeout(intro, 1500);
+                    }
+                    else
+                        setTimeout(intro, 80);
+                }
+                else if (index === 6) {
+                    about.innerHTML += me[index].charAt(letter);
+                    letter++;
+                    if (letter === 27) {
+                        about.innerHTML += "<br/>";
+                        setTimeout(intro, 800);
+                    }
+                    else if (letter === 57) {
+                        about.innerHTML += "<br/>";
+                        setTimeout(intro, 800);
+                    }
+                    else if (letter === 80) {
+                        about.innerHTML += "<br/>";
+                        setTimeout(intro, 800);
+                    }
+                    else if (letter === 109) {
+                        about.innerHTML += "<br/>";
+                        setTimeout(intro, 800);
+                    }
+                    else
+                        setTimeout(intro, 80);
+                }
+                //everything else (normal typing)
                 else {
                     about.innerHTML += me[index].charAt(letter);
                     letter++;
                     setTimeout(intro, 80);
                 }
             }
+            //reset to next element of array
             else {
                 index++;
                 letter = -2;

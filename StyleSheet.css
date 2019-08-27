@@ -123,6 +123,14 @@
 		width: 51.2%;
 	}
 
+	#about {
+		background-color: #729799;
+		min-height: 100%;
+		padding: 15% 10px;
+		text-align: center;
+		z-index: 1;
+	}
+
 	#me-pic {
 		display: none;
 		opacity: 0.9;
@@ -133,14 +141,16 @@
 	#about-txt {
 		background-color: transparent;
 		display: none;
-		font-size: 35px;
+		padding: 0;
+		margin: 0;
+		font-size: 40px;
 	}
 
 	#projects-title {
 		border: 8px outset #e25b4b;
 		display: none;
-		font-size: 90px;
-		left: 250px;
+		font-size: 80px;
+		left: 200px;
 		overflow: hidden;
 		padding: 15px;
 		position: fixed;
@@ -153,7 +163,7 @@
 	#projects-desc {
 		display: none;
 		font-size: 30px;
-		left: 255px;
+		left: 205px;
 		overflow: hidden;
 		position: fixed;
 		text-align: left;
@@ -163,7 +173,7 @@
 
 	#projects-pic {
 		display: none;
-		right: 200px;
+		left: 850px;
 		overflow: hidden;
 		position: fixed;
 		top: 50%;
@@ -225,6 +235,14 @@
 		width: 80%;
 	}
 
+	#about {
+		background-color: #729799;
+		min-height: 100%;
+		padding: 35% 10px;
+		text-align: center;
+		z-index: 1;
+	}
+
 	#me-pic {
 		display: none;
 		opacity: 0.9;
@@ -235,6 +253,8 @@
 	#about-txt {
 		background-color: transparent;
 		display: none;
+		padding: 0;
+		margin: 0;
 		font-size: 20px;
 	}
 
@@ -270,14 +290,6 @@
 		top: 400px;
 		width: 90%;
 	}
-}
-
-#about {
-	background-color: #729799;
-	min-height: 100%;
-	padding: 7% 10px;
-	text-align: center;
-	z-index: 1;
 }
 
 #projects {

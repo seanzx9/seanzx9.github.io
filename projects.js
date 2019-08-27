@@ -6,11 +6,13 @@ window.onload = function () {
 
     var title = [
         "LED Clock",
-        "Project Name"
+        "Project Name 1",
+        "Project Name 2"
     ];
     var def = [
         "Digital clock programmed in x86 assembly with basic timekeeping and alarm functions, USB charging, and a LED binary seconds counter.",
-        "Project description"
+        "Project description 1",
+        "Proect description 2"
     ];
 
     var source = [
@@ -25,7 +27,7 @@ window.onload = function () {
 
     //fade in text
     setTimeout(function () {
-        window.scrollTo(1, 0);
+        window.scrollTo(0, 0);
         $("#projects-title").fadeIn(1000);
         $("#projects-desc").fadeIn(1000);
         $("#projects-pic").fadeIn(1000);
@@ -36,13 +38,13 @@ window.onload = function () {
 
     //change text as scrolling
     document.onscroll = function () {
-        var pos = Math.floor(window.pageYOffset / window.innerHeight);
-        var dec = pos - (window.pageYOffset / window.innerHeight);
+        var pos = Math.floor((window.pageYOffset / window.innerHeight) * 2);
+        var dec = pos - (window.pageYOffset / window.innerHeight) * 2;
         txt.innerHTML = title[pos];
         desc.innerHTML = def[pos];
         pic.src = source[pos];
-        txt.style.opacity = 1.3 + (dec * 1.2);
-        desc.style.opacity = 1.3 + (dec * 1.2);
-        pic.style.opacity = 1.3 + (dec * 1.2);
+        txt.style.opacity = 1.2 + dec;
+        desc.style.opacity = 1.2 + dec;
+        pic.style.opacity = 1.2 + dec;
     }
 }
