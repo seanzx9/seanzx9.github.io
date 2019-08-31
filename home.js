@@ -27,7 +27,7 @@ window.onload = function () {
         "A little more about me...",
         "My favorite color is green." +
         "I practice mixed martial arts." +
-        "I enjoy playing soccer." +
+        "I like soccer." +
         "Mangos are my favorite fruit." +
         "Is that enough?",
         "No?",
