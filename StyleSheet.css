@@ -1,8 +1,10 @@
 ﻿body, html {
+	background-color: #729799;
 	color: #ecfdff;
 	font-family: 'Righteous', cursive;
 	font-size: 15px;
 	height: 100%;
+	margin: 0;
 	width: 100%;
 	position: relative;
 	z-index: 1;
@@ -125,8 +127,8 @@
 
 	#about {
 		background-color: #729799;
-		min-height: 100%;
-		padding: 6% 10px;
+		height: 90%;
+		padding: 5% 10px;
 		text-align: center;
 		z-index: 1;
 	}
@@ -146,38 +148,34 @@
 		font-size: 40px;
 	}
 
-	#projects-title {
+	#project-break {
+		text-align: right;
+	}
+
+	.project-img {
 		border: 8px outset #e25b4b;
-		display: none;
-		font-size: 80px;
-		left: 200px;
-		overflow: hidden;
-		padding: 15px;
-		position: fixed;
-		text-align: left;
-		top: 250px;
+		display: block;
+		margin: 0 auto;
 		width: auto;
-		max-width: 650px;
+		height: 300px;
 	}
 
-	#projects-desc {
-		display: none;
-		font-size: 30px;
-		left: 205px;
-		overflow: hidden;
-		position: fixed;
-		text-align: left;
-		top: 450px;
-		width: 500px;
+	.project-title {
+		font-size: 50px;
 	}
 
-	#projects-pic {
-		display: none;
-		left: 850px;
-		overflow: hidden;
-		position: fixed;
-		top: 50%;
-		transform: translate(0, -50%);
+	.project-desc {
+		font-size: 25px;
+	}
+
+	.project-title-overlay {
+		margin-top: 15px;
+		top: 0;
+	}
+
+	.project-desc-overlay {
+		margin-top: 85px;
+		top: 0;
 	}
 }
 
@@ -237,7 +235,7 @@
 
 	#about {
 		background-color: #729799;
-		min-height: 100%;
+		height: 70%;
 		padding: 8vh 10px;
 		text-align: center;
 		z-index: 1;
@@ -258,46 +256,125 @@
 		font-size: 20px;
 	}
 
-	#projects-title {
-		border: 4px outset #e25b4b;
-		display: none;
-		font-size: 40px;
-		left: 20px;
-		overflow: hidden;
-		padding: 5px;
-		position: fixed;
-		top: 150px;
+	#project-break {
+		text-align: center;
 	}
 
-	#projects-desc {
-		display: none;
-		font-size: 20px;
-		left: 20px;
-		margin-right: 20px;
-		overflow: hidden;
-		position: fixed;
-		text-align: left;
-		top: 240px;
+	.project-img {
+		border: 8px outset #e25b4b;
+		display: block;
+		margin: 0 auto;
+		width: auto;
+		height: 140px;
 	}
 
-	#projects-pic {
-		display: none;
-		margin: 0;
-		overflow: hidden;
-		padding: 0;
-		position: fixed;
-		left: 20px;
-		top: 400px;
-		width: 90%;
+	.project-title {
+		font-size: 30px;
+	}
+
+	.project-desc {
+		font-size: 15px;
+	}
+
+	.project-title-overlay {
+		margin-top: -80px;
+		top: 0;
+	}
+
+	.project-desc-overlay {
+		margin-top: -20px;
+		top: 0;
 	}
 }
 
 #projects {
-	background-color: #64778d;
+	background-color: #729799;
 	min-height: 500vh;
-	overflow: auto;
-	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
 }
+
+/*to divide about me and projects page*/
+#project-break {
+	background-color: #729799;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*header for all projects*/
+#project-header {
+	border-top: 15px dotted #e25b4b;
+	border-bottom: 15px dotted #e25b4b;
+	font-size: 10vh;
+	padding: 100px 15px 100px 0;
+}
+
+/*wrapper for each project*/
+.project-wrapper {
+	margin: auto;
+	position: relative;
+	width: 100%;
+	height: 80vh;
+}
+
+/*Titles of the project slide from the right*/
+.project-title {
+	position: absolute;
+	overflow: visible;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+
+.project-wrapper:hover .project-title-overlay {
+	width: 100%;
+	left: 0;
+}
+
+.project-title-overlay {
+	background-color: transparent;
+	position: absolute;
+	left: 100%;
+	right: 0;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+}
+
+/*Descriptions of the project slide from the left*/
+.project-desc {
+	padding: 0;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	width: 90%;
+}
+
+.project-wrapper:hover .project-desc-overlay {
+	width: 100%;
+}
+
+.project-desc-overlay {
+	background-color: transparent;
+	position: absolute;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+}
+
 
 #footer {
 	background-color: #565656;

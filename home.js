@@ -36,8 +36,7 @@ window.onload = function () {
         "I have no more to say here.",
         "Really.",
         "...",
-        "\"Life would be wonderful if people would leave you alone.\" - Charlie Chaplin",
-        "Ok I have no more.",
+        "Ok there's no more.",
         "For real this time.",
         "Contact me!",
         ":)",
@@ -240,7 +239,7 @@ window.onload = function () {
                     if (letter === me[index].length) {
                         index++;
                         letter = -2;
-                        setTimeout(intro, 1500);
+                        setTimeout(intro, 1200);
                     }
                     else
                         setTimeout(intro, 80);
@@ -251,7 +250,7 @@ window.onload = function () {
                     if (letter === me[index].length) {
                         index++;
                         letter = -2;
-                        setTimeout(intro, 1500);
+                        setTimeout(intro, 1400);
                     }
                     else
                         setTimeout(intro, 80);
@@ -296,22 +295,24 @@ window.onload = function () {
                     letter++;
                     if (letter === 35) {
                         about.innerHTML += "<br/>";
-                        setTimeout(intro, 1500);
+                        setTimeout(intro, 1400);
                     }
                     else
                         setTimeout(intro, 80);
                 }
+                //let user know they're continuing
                 else if (index === 5) {
                     about.innerHTML += me[index].charAt(letter);
                     letter++;
                     if (letter === me[index].length) {
                         index++;
                         letter = -2;
-                        setTimeout(intro, 1500);
+                        setTimeout(intro, 1400);
                     }
                     else
                         setTimeout(intro, 80);
                 }
+                //list some fun facts
                 else if (index === 6) {
                     about.innerHTML += me[index].charAt(letter);
                     letter++;
@@ -323,11 +324,11 @@ window.onload = function () {
                         about.innerHTML += "<br/>";
                         setTimeout(intro, 800);
                     }
-                    else if (letter === 80) {
+                    else if (letter === 71) {
                         about.innerHTML += "<br/>";
                         setTimeout(intro, 800);
                     }
-                    else if (letter === 109) {
+                    else if (letter === 100) {
                         about.innerHTML += "<br/>";
                         setTimeout(intro, 800);
                     }

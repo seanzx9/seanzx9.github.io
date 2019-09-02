@@ -1,8 +1,10 @@
 window.onload = function () {
+
     //elements on the page
     var txt = document.getElementById("projects-title");
     var desc = document.getElementById("projects-desc");
     var pic = document.getElementById("projects-pic");
+    document.getE
 
     var title = [
         "LED Clock",
