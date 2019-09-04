@@ -36,18 +36,24 @@ window.onload = function () {
         "I have no more to say here.",
         "Really.",
         "...",
-        "Ok there's no more.",
         "For real this time.",
         "Contact me!",
         ":)",
         ""
     ];
     
-    //fade in when scrolled to
+    //fade in about page when scrolled to
     $(document).on("scroll", function () {
-        if ($(this).scrollTop() >= $('#me-pic').position().top + 300) {
-            $('#me-pic').fadeIn(1000);
-            $('#about-txt').fadeIn(1000);
+        if ($(this).scrollTop() >= $("#me-pic").position().top + 300) {
+            $("#me-pic").fadeIn(1000);
+            $("#about-txt").fadeIn(1000);
+        }
+    })
+
+    //fade in projects break when scrolled to
+    $(document).on("scroll", function () {
+        if ($(this).scrollTop() >= $('#project-header').position().top + 1000) {
+            $('#project-header').fadeIn(1000);
         }
     })
 
@@ -318,19 +324,19 @@ window.onload = function () {
                     letter++;
                     if (letter === 27) {
                         about.innerHTML += "<br/>";
-                        setTimeout(intro, 800);
+                        setTimeout(intro, 500);
                     }
                     else if (letter === 57) {
                         about.innerHTML += "<br/>";
-                        setTimeout(intro, 800);
+                        setTimeout(intro, 500);
                     }
                     else if (letter === 71) {
                         about.innerHTML += "<br/>";
-                        setTimeout(intro, 800);
+                        setTimeout(intro, 500);
                     }
                     else if (letter === 100) {
                         about.innerHTML += "<br/>";
-                        setTimeout(intro, 800);
+                        setTimeout(intro, 500);
                     }
                     else
                         setTimeout(intro, 80);

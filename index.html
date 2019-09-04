@@ -18,6 +18,7 @@
 
 <body>
 
+	<!--Navbar top (leopard logo with name slide in)-->
 	<nav class="navbar fixed-top navbar-dark">
 		<a class="navbar-brand" href="index.html">
 			<img src="/img/leo.png" width="180" id="leo" alt="Sean Le">
@@ -27,6 +28,7 @@
 		</a>
 	</nav>
 
+	<!--Opening page-->
 	<div class="container-fluid" id="home">
 		<span id="welcome-txt"></span>
 		<div id="line1"></div>
@@ -34,6 +36,7 @@
 		<span id="arrow">^</span>
 	</div>
 
+	<!--About page-->
 	<div class="container-fluid" id="about">
 		<div class="d-md-flex h-md-100 align-items-center">
 			<div class="col-md-6 p-0 h-md-100">
@@ -53,21 +56,96 @@
 		</div>
 	</div>
 
+	<!--Begin projects by breaking page-->
 	<div id="project-break">
+		<div class="row">
+			<div class="box" style="height: 40vh; margin-top: 15vh;"></div>
+			<div class="box" style="height: 63vh; margin-top: 2vh;"></div>
+			<div class="box" style="height: 44vh; margin-top: 12vh;"></div>
+			<div class="box" style="height: 65vh; margin-top: 5vh;"></div>
+			<div class="box" style="height: 52vh; margin-top: 10vh;"></div>
+			<div class="box" style="height: 57vh; margin-top: 8vh;"></div>
+			<div class="box" style="height: 45vh; margin-top: 12vh;"></div>
+			<div class="box" style="height: 67vh; margin-top: 4vh;"></div>
+			<div class="box" style="height: 40vh; margin-top: 16vh;"></div>
+			<div class="box" style="height: 58vh; margin-top: 9vh;"></div>
+		</div>
 		<h1 class="container-fluid" id="project-header">My Projects</h1>
 	</div>
 
+	<!--List of my projects-->
 	<div class="container-fluid" id="projects">
 
+		<!--LED clock-->
 		<div class="project-wrapper">
-			<img class="project-img shadow-lg" src="/img/clock.jpg" alt="Clock">
+			<img class="project-img shadow-lg" src="/img/clock.jpg" alt="Clock" id="clk-img">
 			<div class="project-title-overlay">
 				<div class="project-title">LED Clock</div>
 			</div>
 			<div class="project-desc-overlay">
+				<div class="project-desc" id="clk-desc">
+					Programmed in Assembly and simulated in PSpice - a fully
+					functional digital clock with basic timekeeping functions,
+					alarm function, a USB charging port, and LED binary seconds counter.
+				</div>
+			</div>
+		</div>
+
+		<!--Menu-Driven Database-->
+		<div class="project-wrapper">
+			<img class="project-img shadow-lg" src="/img/clock.jpg" alt="Clock">
+			<div class="project-title-overlay">
+				<div class="project-title">Menu-Driven Database</div>
+			</div>
+			<div class="project-desc-overlay">
 				<div class="project-desc">
-					Programmed in Assembly and simulated in PSpice - a fully 
-					functional digital clock with basic timekeeping functions, 
+					Programmed in Assembly and simulated in PSpice - a fully
+					functional digital clock with basic timekeeping functions,
+					alarm function, a USB charging port, and LED binary seconds counter.
+				</div>
+			</div>
+		</div>
+
+		<!--Frequency Meter System with Auto Ranging-->
+		<div class="project-wrapper">
+			<img class="project-img shadow-lg" src="/img/clock.jpg" alt="Clock">
+			<div class="project-title-overlay">
+				<div class="project-title">Frequency Meter System</div>
+			</div>
+			<div class="project-desc-overlay">
+				<div class="project-desc">
+					Programmed in Assembly and simulated in PSpice - a fully
+					functional digital clock with basic timekeeping functions,
+					alarm function, a USB charging port, and LED binary seconds counter.
+				</div>
+			</div>
+		</div>
+
+		<!--Trip Planner-->
+		<div class="project-wrapper">
+			<img class="project-img shadow-lg" src="/img/clock.jpg" alt="Clock">
+			<div class="project-title-overlay">
+				<div class="project-title">Trip Planner</div>
+			</div>
+			<div class="project-desc-overlay">
+				<div class="project-desc">
+					Programmed in Assembly and simulated in PSpice - a fully
+					functional digital clock with basic timekeeping functions,
+					alarm function, a USB charging port, and LED binary seconds counter.
+				</div>
+			</div>
+		</div>
+
+		<!--Direct Digital Synthesis System-->
+		<div class="project-wrapper">
+			<img class="project-img shadow-lg" src="/img/clock.jpg" alt="Clock">
+			<div class="project-title-overlay">
+				<div class="project-title">Direct Digital Synthesis System</div>
+			</div>
+			<div class="project-desc-overlay">
+				<div class="project-desc">
+					Programmed in Assembly and simulated in PSpice - a fully
+					functional digital clock with basic timekeeping functions,
 					alarm function, a USB charging port, and LED binary seconds counter.
 				</div>
 			</div>
@@ -75,6 +153,7 @@
 
 	</div>
 
+	<!--Navabar p2 (sits on bottom left)-->
 	<nav class="navbar navbar-dark" id="bottom-nav">
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -86,6 +165,7 @@
 		</ul>
 	</nav>
 
+	<!--Footer-->
 	<div id="footer" class="container-fluid">
 		<p id="contact-me">Contact Me!</p>
 		<ul class="footer-ul">

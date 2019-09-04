@@ -127,7 +127,7 @@
 
 	#about {
 		background-color: #729799;
-		height: 90%;
+		height: 95%;
 		padding: 5% 10px;
 		text-align: center;
 		z-index: 1;
@@ -136,7 +136,7 @@
 	#me-pic {
 		display: none;
 		opacity: 0.9;
-		width: 90%;
+		width: 80%;
 		height: auto;
 	}
 
@@ -150,6 +150,15 @@
 
 	#project-break {
 		text-align: right;
+		padding-top: 40vh;
+		padding-bottom: 50vh;
+	}
+
+	.project-wrapper {
+		margin: 0 auto;
+		position: relative;
+		width: 100%;
+		height: 100vh;
 	}
 
 	.project-img {
@@ -158,6 +167,7 @@
 		margin: 0 auto;
 		width: auto;
 		height: 300px;
+		z-index: 999;
 	}
 
 	.project-title {
@@ -169,12 +179,12 @@
 	}
 
 	.project-title-overlay {
-		margin-top: 15px;
+		margin-top: -6vh;
 		top: 0;
 	}
 
 	.project-desc-overlay {
-		margin-top: 85px;
+		margin-top: 5vh;
 		top: 0;
 	}
 }
@@ -235,8 +245,8 @@
 
 	#about {
 		background-color: #729799;
-		height: 100%;
-		padding: 8vh 10px;
+		height: 90%;
+		padding: 10vh 10px 0 10px;
 		text-align: center;
 		z-index: 1;
 	}
@@ -258,6 +268,14 @@
 
 	#project-break {
 		text-align: center;
+		padding-bottom: 100px;
+	}
+
+	.project-wrapper {
+		margin: 0 auto;
+		position: relative;
+		width: 80%;
+		height: 90vh;
 	}
 
 	.project-img {
@@ -266,6 +284,7 @@
 		margin: 0 auto;
 		width: auto;
 		height: 140px;
+		z-index: 999;
 	}
 
 	.project-title {
@@ -277,12 +296,12 @@
 	}
 
 	.project-title-overlay {
-		margin-top: -80px;
+		margin-top: -20vh;
 		top: 0;
 	}
 
 	.project-desc-overlay {
-		margin-top: -20px;
+		margin-top: -7vh;
 		top: 0;
 	}
 }
@@ -297,27 +316,35 @@
 /*to divide about me and projects page*/
 #project-break {
 	background-color: #729799;
-	height: 100vh;
+	height: 110vh;
+	position: relative;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-/*header for all projects*/
-#project-header {
-	border-top: 15px dotted #e25b4b;
-	border-bottom: 15px dotted #e25b4b;
-	font-size: 10vh;
-	padding: 100px 15px 100px 0;
+/*row and box to creaete divider*/
+.row {
+	display: table;
+	width: 100%; 
 }
 
-/*wrapper for each project*/
-.project-wrapper {
-	margin: auto;
-	position: relative;
-	width: 100%;
-	height: 80vh;
+.box {
+	background-color: #e25b4b;
+	float: left;
+	margin-left: 0.1%;
+	margin-right: 0.1%;
+	width: 9.8%;
+}
+
+/*header for all projects in divider*/
+#project-header {
+	display: none;
+	font-size: 10vh;
+	position: absolute;
+	width: auto;
+	padding: 80px 15px 100px 0;
 }
 
 /*Titles of the project slide from the right*/
@@ -328,14 +355,19 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
-	white-space: nowrap;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	white-space: normal;
 }
 
+/*Slide in from the right when hovered over*/
 .project-wrapper:hover .project-title-overlay {
 	width: 100%;
 	left: 0;
 }
 
+/*Overlay for the title of the project*/
 .project-title-overlay {
 	background-color: transparent;
 	position: absolute;
@@ -357,22 +389,27 @@
 	text-align: center;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
-	width: 90%;
-}
-
-.project-wrapper:hover .project-desc-overlay {
 	width: 100%;
 }
 
+/*Slide in from the left when hovered over*/
+.project-wrapper:hover .project-desc-overlay {
+	width: 100%;
+	height: 100%;
+}
+
+/*Overlay for the project descriptions*/
 .project-desc-overlay {
 	background-color: transparent;
 	position: absolute;
 	left: 0;
 	right: 0;
+	bottom: 0;
 	overflow: hidden;
 	width: 0;
-	height: 100%;
+	height: 0;
 	transition: .5s ease;
+	z-index: 0;
 }
 
 
