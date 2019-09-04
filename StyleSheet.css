@@ -148,6 +148,13 @@
 		font-size: 40px;
 	}
 
+	#projects {
+		background-color: #729799;
+		min-height: 500vh;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	#project-break {
 		text-align: right;
 		padding-top: 40vh;
@@ -271,6 +278,13 @@
 		padding-bottom: 100px;
 	}
 
+	#projects {
+		background-color: #729799;
+		min-height: 450vh;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	.project-wrapper {
 		margin: 0 auto;
 		position: relative;
@@ -304,13 +318,6 @@
 		margin-top: -7vh;
 		top: 0;
 	}
-}
-
-#projects {
-	background-color: #729799;
-	min-height: 500vh;
-	padding-left: 0;
-	padding-right: 0;
 }
 
 /*to divide about me and projects page*/
