@@ -192,7 +192,7 @@
 	}
 
 	.project-desc-overlay {
-		margin-top: 5vh;
+		margin-top: 6vh;
 		top: 0;
 	}
 }
@@ -317,6 +317,20 @@
 
 	.project-desc-overlay {
 		margin-top: -7vh;
+		top: 0;
+	}
+	
+	#trip-planner-img {
+		height: 220px;
+	}
+
+	#trip-planner-title {
+		margin-top: -5vh;
+		top: 0;
+	}
+
+	#trip-planner-desc {
+		margin-top: 10vh;
 		top: 0;
 	}
 }
