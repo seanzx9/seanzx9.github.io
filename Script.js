@@ -75,7 +75,7 @@ window.onload = function () {
 
     //start at top of page
     setTimeout(function () {
-        window.scrollTo(0, 0);
+        //window.scrollTo(0, 0);
     }, 1);
 
     //types out message, sets typed to true when completed

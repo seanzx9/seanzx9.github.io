@@ -153,6 +153,7 @@
 		min-height: 500vh;
 		padding-left: 0;
 		padding-right: 0;
+		padding-top: 200px;
 	}
 
 	#project-break {
@@ -178,7 +179,7 @@
 	}
 
 	.project-title {
-		font-size: 50px;
+		font-size: 60px;
 	}
 
 	.project-desc {
@@ -187,12 +188,12 @@
 	}
 
 	.project-title-overlay {
-		margin-top: -6vh;
+		margin-top: -450px;
 		top: 0;
 	}
 
 	.project-desc-overlay {
-		margin-top: 6vh;
+		margin-top: -30px;
 		top: 0;
 	}
 }
@@ -311,12 +312,12 @@
 	}
 
 	.project-title-overlay {
-		margin-top: -20vh;
+		margin-top: -18vh;
 		top: 0;
 	}
 
 	.project-desc-overlay {
-		margin-top: -7vh;
+		margin-top: -3vh;
 		top: 0;
 	}
 	
@@ -383,7 +384,7 @@
 	white-space: normal;
 }
 
-/*Slide in from the right when hovered over*/
+/*Title slide in from the right when hovered over*/
 .project-wrapper:hover .project-title-overlay {
 	width: 100%;
 	left: 0;
