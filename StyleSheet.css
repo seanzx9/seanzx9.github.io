@@ -183,6 +183,7 @@
 
 	.project-desc {
 		font-size: 25px;
+		padding: 10%;
 	}
 
 	.project-title-overlay {
@@ -280,7 +281,7 @@
 
 	#projects {
 		background-color: #729799;
-		min-height: 450vh;
+		min-height: 300vh;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -298,7 +299,6 @@
 		margin: 0 auto;
 		width: auto;
 		height: 140px;
-		z-index: 999;
 	}
 
 	.project-title {
@@ -307,6 +307,7 @@
 
 	.project-desc {
 		font-size: 15px;
+		padding: 0;
 	}
 
 	.project-title-overlay {
@@ -388,7 +389,6 @@
 
 /*Descriptions of the project slide from the left*/
 .project-desc {
-	padding: 0;
 	position: absolute;
 	overflow: hidden;
 	top: 50%;
