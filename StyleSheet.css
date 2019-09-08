@@ -164,18 +164,59 @@
 
 	.project-wrapper {
 		margin: 0 auto;
+		overflow: hidden;
 		position: relative;
 		width: 100%;
 		height: 100vh;
+		min-height: 800px
+	}
+
+	/*titles of the project*/
+	.project-title {
+		position: absolute;
+		overflow: visible;
+		top: 110px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+		font-weight: bold;
+		white-space: pre-line;
+	}
+
+	/*descriptions of the project*/
+	.project-desc {
+		position: absolute;
+		overflow: hidden;
+		top: 200px;
+		left: 50%;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		width: 100%;
+		white-space: pre-line;
+	}
+
+	.img-wrapper {
+		height: 300px;
+		white-space: nowrap;
+		text-align: center;
+		margin: 1em 0;
+	}
+
+	.temp {
+		display: inline-block;
+		height: 100%;
+		vertical-alignL middle;
 	}
 
 	.project-img {
 		border: 8px outset #e25b4b;
-		display: block;
-		margin: 0 auto;
 		width: auto;
 		height: 300px;
-		z-index: 999;
+		display: inline-block;
+		vertical-align: middle;
 	}
 
 	.project-title {
@@ -184,17 +225,6 @@
 
 	.project-desc {
 		font-size: 25px;
-		padding: 10%;
-	}
-
-	.project-title-overlay {
-		margin-top: -450px;
-		top: 0;
-	}
-
-	.project-desc-overlay {
-		margin-top: -30px;
-		top: 0;
 	}
 }
 
@@ -290,16 +320,63 @@
 	.project-wrapper {
 		margin: 0 auto;
 		position: relative;
-		width: 80%;
+		width: 90%;
 		height: 90vh;
+		overflow: hidden;
+	}
+
+	/*titles of the project*/
+	.project-title {
+		position: absolute;
+		overflow: visible;
+		top: 110px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+		font-weight: bold;
+		white-space: pre-line;
+	}
+
+	/*descriptions of the project*/
+	.project-desc {
+		position: absolute;
+		overflow: hidden;
+		top: 200px;
+		left: 50%;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		width: 100%;
+		white-space: pre-line;
+	}
+
+	.img-wrapper {
+		height: 150px;
+		white-space: nowrap;
+		text-align: center;
+		margin: 2em 0;
+	}
+
+	.temp {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
 	}
 
 	.project-img {
 		border: 8px outset #e25b4b;
-		display: block;
-		margin: 0 auto;
+		display: inline-block;
+		height: 150px;
+		margin-top: 150px;
 		width: auto;
-		height: 140px;
+		vertical-align: middle;
+	}
+
+	#trip-planner-img {
+		height: 200px;
+		margin-top: 110px;
 	}
 
 	.project-title {
@@ -308,31 +385,6 @@
 
 	.project-desc {
 		font-size: 15px;
-		padding: 0;
-	}
-
-	.project-title-overlay {
-		margin-top: -18vh;
-		top: 0;
-	}
-
-	.project-desc-overlay {
-		margin-top: -3vh;
-		top: 0;
-	}
-	
-	#trip-planner-img {
-		height: 220px;
-	}
-
-	#trip-planner-title {
-		margin-top: -5vh;
-		top: 0;
-	}
-
-	#trip-planner-desc {
-		margin-top: 10vh;
-		top: 0;
 	}
 }
 
@@ -347,12 +399,13 @@
 	justify-content: center;
 }
 
-/*row and box to creaete divider*/
+/*row and box to create divider*/
 .row {
 	display: table;
 	width: 100%; 
 }
 
+/*orange boxes in divider*/
 .box {
 	background-color: #e25b4b;
 	float: left;
@@ -370,70 +423,43 @@
 	padding: 80px 15px 100px 0;
 }
 
-/*Titles of the project slide from the right*/
-.project-title {
-	position: absolute;
-	overflow: visible;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
+/*title slide in from the left when hovered over*/
+.project-wrapper:hover .project-title-overlay {
 	width: 100%;
-	text-align: center;
-	font-weight: bold;
-	white-space: normal;
+	right: 0;
 }
 
-/*Title slide in from the right when hovered over*/
-.project-wrapper:hover .project-title-overlay {
+/*overlay for the title of the project*/
+.project-title-overlay {
+	background-color: transparent;
+	position: absolute;
+	right: 100%;
+	left: 0;
+	min-height: 600px;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+}
+
+/*slide in from the right when hovered over*/
+.project-wrapper:hover .project-desc-overlay {
 	width: 100%;
 	left: 0;
 }
 
-/*Overlay for the title of the project*/
-.project-title-overlay {
+/*overlay for the project descriptions*/
+.project-desc-overlay {
 	background-color: transparent;
 	position: absolute;
 	left: 100%;
 	right: 0;
+	min-height: 500px;
 	overflow: hidden;
 	width: 0;
 	height: 100%;
-	transition: .5s ease;
+	transition: .3s ease;
 }
-
-/*Descriptions of the project slide from the left*/
-.project-desc {
-	position: absolute;
-	overflow: hidden;
-	top: 50%;
-	left: 50%;
-	text-align: center;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	width: 100%;
-}
-
-/*Slide in from the left when hovered over*/
-.project-wrapper:hover .project-desc-overlay {
-	width: 100%;
-	height: 100%;
-}
-
-/*Overlay for the project descriptions*/
-.project-desc-overlay {
-	background-color: transparent;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	width: 0;
-	height: 0;
-	transition: .5s ease;
-	z-index: 0;
-}
-
 
 #footer {
 	background-color: #565656;
