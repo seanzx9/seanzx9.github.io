@@ -36,26 +36,70 @@ window.onload = function () {
         "I have no more to say here.",
         "Really.",
         "...",
-        "For real this time.",
+        "For real this time...",
         "Contact me!",
-        ":)",
-        ""
+        ":)"
     ];
+    //about me pic and text
+    var pfp = document.getElementById("me-pic");
+    var aboutTxt = document.getElementById("about-txt");
+    var opacityPercent = 0.9;
     
-    //fade in about page when scrolled to
+    //wait for scroll
     $(document).on("scroll", function () {
-        if ($(this).scrollTop() >= $("#me-pic").position().top + 300) {
-            $("#me-pic").fadeIn(1000);
-            $("#about-txt").fadeIn(1000);
-        }
-    })
-
-    //fade in projects break when scrolled to
-    $(document).on("scroll", function () {
+        //fade in projects break when scrolled to
         if ($(this).scrollTop() >= $('#project-header').position().top + 1000) {
             $('#project-header').fadeIn(1000);
         }
+
+        //fade out when scrolled down
+        if (window.innerWidth > 768) {
+            if (window.pageYOffset < innerHeight * 1.3)
+                opacityPercent = 0.9;
+            else if (window.pageYOffset > innerHeight * 1.85)
+                opacityPercent = -0.1;
+            else if (window.pageYOffset > innerHeight * 1.8)
+                opacityPercent = 0;
+            else if (window.pageYOffset > innerHeight * 1.75)
+                opacityPercent = 0.1;
+            else if (window.pageYOffset > innerHeight * 1.7)
+                opacityPercent = 0.2;
+            else if (window.pageYOffset > innerHeight * 1.65)
+                opacityPercent = 0.3;
+            else if (window.pageYOffset > innerHeight * 1.6)
+                opacityPercent = 0.4;
+            else if (window.pageYOffset > innerHeight * 1.55)
+                opacityPercent = 0.5;
+            else if (window.pageYOffset > innerHeight * 1.5)
+                opacityPercent = 0.6;
+            else if (window.pageYOffset > innerHeight * 1.45)
+                opacityPercent = 0.65;
+            else if (window.pageYOffset > innerHeight * 1.4)
+                opacityPercent = 0.7;
+            else if (window.pageYOffset > innerHeight * 1.35)
+                opacityPercent = 0.75;
+            else if (window.pageYOffset > innerHeight * 1.3)
+                opacityPercent = 0.8;
+
+            pfp.style.opacity = opacityPercent;
+            aboutTxt.style.opacity = opacityPercent + 0.1;
+        }
     })
+
+    $(window).scroll(function () {
+        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $(".fade").each(function () {
+            /* Check the location of each desired element */
+            var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+            /* If the element is completely within bounds of the window, fade it in */
+            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                if ($(this).css("opacity") == 0) { $(this).fadeTo(500, 1); }
+            } else { //object goes out of view (scrolling up)
+                if ($(this).css("opacity") == 1) { $(this).fadeTo(500, 0); }
+            }
+        });
+    }).scroll();
 
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
@@ -138,7 +182,7 @@ window.onload = function () {
         }
     }, 400);
 
-    //follows scroll to delete characters or change lines
+    //follows scroll to delete characters or change lines or hide about me content
     setInterval(function () {
         if (typed === true) {
             //don't extend if past page width

@@ -7,7 +7,7 @@
 	margin: 0;
 	width: 100%;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
 
 /*navbar styling*/
@@ -15,6 +15,7 @@
 	background-color: transparent;
 	color: #ecfdff;
 	font-size: 25px;
+	z-index: 100;
 }
 
 .navbar-brand:hover .overlay {
@@ -52,6 +53,7 @@
 	position: -webkit-sticky;
 	position: sticky;
 	bottom: 0;
+	z-index: 100;
 }
 
 /*for home page*/
@@ -62,13 +64,14 @@
 	min-height: 350px;
 	text-align: left;
 	position: relative;
-	z-index: -4;
+	z-index: 2;
 }
 
 #welcome-txt {
 	background-color: transparent;
 	position: absolute;
 	top: 32%;
+	z-index: 4;
 }
 
 /*computer*/
@@ -98,7 +101,7 @@
 		position: absolute;
 		top: 40%;
 		width: 225px;
-		z-index: -1;
+		z-index: 3;
 	}
 
 	#line2 {
@@ -109,7 +112,7 @@
 		position: absolute;
 		top: 55%;
 		width: 360px;
-		z-index: -1;
+		z-index: 3;
 	}
 
 	#arrow {
@@ -130,36 +133,54 @@
 		height: 95%;
 		padding: 5% 10px;
 		text-align: center;
-		z-index: 1;
+		z-index: 0;
 	}
 
 	#me-pic {
-		display: none;
+		display: inline-block;
 		opacity: 0.9;
-		width: 80%;
+		width: 400px;
 		height: auto;
+		left: 12%;
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		vertical-align: middle;
+		z-index: 1;
 	}
 
 	#about-txt {
 		background-color: transparent;
-		display: none;
+		display: inline-block;
 		padding: 0;
 		margin: 0;
 		font-size: 40px;
+		width: 40%;
+		left: 52%;
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		vertical-align: middle;
+		z-index: 1;
 	}
 
 	#projects {
 		background-color: #729799;
+		display: inline-block;
 		min-height: 500vh;
 		padding-left: 0;
 		padding-right: 0;
 		padding-top: 200px;
+		z-index: 3;
 	}
 
 	#project-break {
 		text-align: right;
 		padding-top: 40vh;
 		padding-bottom: 50vh;
+		z-index: 2;
 	}
 
 	.project-wrapper {
@@ -168,7 +189,8 @@
 		position: relative;
 		width: 100%;
 		height: 100vh;
-		min-height: 800px
+		min-height: 800px;
+		z-index: 2;
 	}
 
 	/*titles of the project*/
@@ -208,7 +230,6 @@
 	.temp {
 		display: inline-block;
 		height: 100%;
-		vertical-alignL middle;
 	}
 
 	.project-img {
@@ -287,11 +308,10 @@
 		height: 90%;
 		padding: 10vh 10px 0 10px;
 		text-align: center;
-		z-index: 1;
 	}
 
 	#me-pic {
-		display: none;
+		display: inline-block;
 		opacity: 0.9;
 		width: 85%;
 		height: auto;
@@ -299,7 +319,7 @@
 
 	#about-txt {
 		background-color: transparent;
-		display: none;
+		display: inline-block;
 		padding: 0;
 		margin: 0;
 		font-size: 20px;
@@ -329,7 +349,7 @@
 	.project-title {
 		position: absolute;
 		overflow: visible;
-		top: 110px;
+		top: 120px;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		-ms-transform: translate(-50%, -50%);
@@ -362,7 +382,6 @@
 	.temp {
 		display: inline-block;
 		height: 100%;
-		vertical-align: middle;
 	}
 
 	.project-img {
@@ -376,7 +395,7 @@
 
 	#trip-planner-img {
 		height: 200px;
-		margin-top: 110px;
+		margin-top: 120px;
 	}
 
 	.project-title {
@@ -390,13 +409,14 @@
 
 /*to divide about me and projects page*/
 #project-break {
-	background-color: #729799;
+	background-color: transparent;
 	height: 110vh;
 	position: relative;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 2;
 }
 
 /*row and box to create divider*/
@@ -421,6 +441,7 @@
 	position: absolute;
 	width: auto;
 	padding: 80px 15px 100px 0;
+	z-index: 2;
 }
 
 /*title slide in from the left when hovered over*/
