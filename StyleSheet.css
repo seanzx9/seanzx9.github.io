@@ -211,7 +211,7 @@
 	.project-desc {
 		position: absolute;
 		overflow: hidden;
-		top: 200px;
+		top: 180px;
 		left: 50%;
 		text-align: center;
 		transform: translate(-50%, -50%);

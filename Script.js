@@ -59,7 +59,7 @@ window.onload = function () {
             else if (window.pageYOffset > innerHeight * 1.85)
                 opacityPercent = -0.1;
             else if (window.pageYOffset > innerHeight * 1.8)
-                opacityPercent = 0;
+                opacityPercent = 0.05;
             else if (window.pageYOffset > innerHeight * 1.75)
                 opacityPercent = 0.1;
             else if (window.pageYOffset > innerHeight * 1.7)
