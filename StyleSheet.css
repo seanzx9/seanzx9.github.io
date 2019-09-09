@@ -131,6 +131,7 @@
 	#about {
 		background-color: #729799;
 		height: 95%;
+		margin-top: 50px;
 		padding: 5% 10px;
 		text-align: center;
 		z-index: 0;
@@ -511,11 +512,13 @@
 	padding: 10px;
 }
 
-#email-icon, #linkedin-icon {
+.icon {
+	height: 40px;
 	opacity: 0.9;
 	transition: 0.3s;
+	width: 40px;
 }
 
-#email-icon:hover, #linkedin-icon:hover {
+.icon:hover {
 	opacity: 0.6;
 }

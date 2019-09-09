@@ -22,7 +22,7 @@ window.onload = function () {
         "I'm a student at Stony Brook University.",
         "I major in Computer Engineering.  and minor in Enviromental Design, Policy, and Planning.",
         "In short, I'm into tech and the environment.",
-        "Feel free to check out my projects!" +
+        "Scroll down to check out my projects!" +
         "Or keep clicking/tapping...",
         "A little more about me...",
         "My favorite color is green." +
@@ -36,7 +36,6 @@ window.onload = function () {
         "I have no more to say here.",
         "Really.",
         "...",
-        "For real this time...",
         "Contact me!",
         ":)"
     ];
@@ -343,7 +342,7 @@ window.onload = function () {
                 else if (index === 4) {
                     about.innerHTML += me[index].charAt(letter);
                     letter++;
-                    if (letter === 35) {
+                    if (letter === 37) {
                         about.innerHTML += "<br/>";
                         setTimeout(intro, 1400);
                     }
