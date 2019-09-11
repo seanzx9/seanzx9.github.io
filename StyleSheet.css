@@ -172,7 +172,7 @@
 		min-height: 500vh;
 		padding-left: 0;
 		padding-right: 0;
-		padding-top: 200px;
+		padding-top: 0;
 		z-index: 3;
 	}
 
@@ -236,7 +236,7 @@
 		border: 8px outset #e25b4b;
 		width: auto;
 		height: 300px;
-		display: inline-block;
+		display: none;
 		vertical-align: middle;
 	}
 
@@ -384,7 +384,7 @@
 
 	.project-img {
 		border: 8px outset #e25b4b;
-		display: inline-block;
+		display: none;
 		height: 150px;
 		margin-top: 150px;
 		width: auto;

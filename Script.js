@@ -7,7 +7,10 @@ window.onload = function () {
     var typed = false;
     var txt = document.getElementById("welcome-txt");
     //for the arrow
-    var arrowShow = 0;
+    var arrow = document.getElementById("arrow");
+    var arrowPos = -1;
+    var up = false;
+    var down = true;
     //line elements and widths
     var line1 = document.getElementById("line1");
     var line2 = document.getElementById("line2");
@@ -46,10 +49,44 @@ window.onload = function () {
     
     //wait for scroll
     $(document).on("scroll", function () {
-        //fade in projects break when scrolled to
         if ($(this).scrollTop() >= $('#project-header').position().top + 1000) {
             $('#project-header').fadeIn(1000);
+        } 
+        if (window.innerWidth > 768) {
+            if ($(this).scrollTop() >= $('#DDS').position().top + 1900) {
+                $('#DDS').fadeIn(1000);
+            }
+            if ($(this).scrollTop() >= $('#trip-planner-img').position().top + 2800) {
+                $('#trip-planner-img').fadeIn(1000);
+            }
+            if ($(this).scrollTop() >= $('#FMS').position().top + 3500) {
+                $('#FMS').fadeIn(1000);
+            }
+            if ($(this).scrollTop() >= $('#MDD').position().top + 4200) {
+                $('#MDD').fadeIn(1000);
+            }
+            if ($(this).scrollTop() >= $('#clk-img').position().top + 4900) {
+                $('#clk-img').fadeIn(1000);
+            }
         }
+        else {
+            if ($(this).scrollTop() >= $('#DDS').position().top + 1900) {
+                $('#DDS').fadeIn(1000);
+            }
+            if ($(this).scrollTop() >= $('#trip-planner-img').position().top + 2450) {
+                $('#trip-planner-img').fadeIn(1000);
+            }
+            if ($(this).scrollTop() >= $('#FMS').position().top + 3000) {
+                $('#FMS').fadeIn(1000);
+            }
+            if ($(this).scrollTop() >= $('#MDD').position().top + 3550) {
+                $('#MDD').fadeIn(1000);
+            }
+            if ($(this).scrollTop() >= $('#clk-img').position().top + 4100) {
+                $('#clk-img').fadeIn(1000);
+            }
+        }
+        
 
         //fade out when scrolled down
         if (window.innerWidth > 768) {
@@ -84,21 +121,6 @@ window.onload = function () {
             aboutTxt.style.opacity = opacityPercent + 0.1;
         }
     })
-
-    $(window).scroll(function () {
-        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-        $(".fade").each(function () {
-            /* Check the location of each desired element */
-            var objectBottom = $(this).offset().top + $(this).outerHeight();
-
-            /* If the element is completely within bounds of the window, fade it in */
-            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-                if ($(this).css("opacity") == 0) { $(this).fadeTo(500, 1); }
-            } else { //object goes out of view (scrolling up)
-                if ($(this).css("opacity") == 1) { $(this).fadeTo(500, 0); }
-            }
-        });
-    }).scroll();
 
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
@@ -167,25 +189,31 @@ window.onload = function () {
         if (typed === true) {
             //hide element if scroll too far down
             if (window.pageYOffset > 500) {
-                document.getElementById("arrow").style.visibility = "hidden";
-            }
-            if (arrowShow === 0) {
-                document.getElementById("arrow").style.visibility = "visible";
-                document.getElementById("arrow").style.bottom = "-20px";
-                arrowShow = 2;
-            }
-            else if (arrowShow === 2) {
-                document.getElementById("arrow").style.bottom = "-50px";
-                arrowShow = 1;
+                arrow.style.visibility = "hidden";
             }
             else {
-                document.getElementById("arrow").style.bottom = "-80px";
-                arrowShow = 0;
+                arrow.style.visibility = "visible";
+                if (down === true) {
+                    arrowPos *= 1.08;
+                    arrow.style.bottom = arrowPos + "px";
+                    if (arrowPos <= -80) {
+                        down = false;
+                        up = true;
+                    }
+                }
+                else if (up === true) {
+                    arrowPos *= 0.92;
+                    arrow.style.bottom = arrowPos + "px";
+                    if (arrowPos >= -1) {
+                        down = true;
+                        up = false;
+                    }
+                }
             }
         }
-    }, 400);
+    }, 10);
 
-    //follows scroll to delete characters or change lines or hide about me content
+    //follows scroll to change welcome screen
     window.onscroll = function() {
         if (typed === true) {
             if (window.innerWidth > 768) {
@@ -201,14 +229,17 @@ window.onload = function () {
                     txt.style.left = 15 + (window.pageYOffset * 2.5) + "px";
                     txt.style.fontSize = ((window.pageYOffset / 30) + 1 * 10) + "vh";
                     txt.style.top = 32 - (window.pageYOffset / 20) + "%";
-                    line1.style.top = 40 - (window.pageYOffset / 40) + "%";
-                    line2.style.top = 55 + (window.pageYOffset / 36) + "%";
+                    line1.style.top = 40 - (window.pageYOffset / 35) + "%";
+                    line2.style.top = 55 + (window.pageYOffset / 44) + "%";
+                    line1.style.borderTopWidth = 10 + window.pageYOffset/10 + "px";
+                    line2.style.borderTopWidth = 10 + window.pageYOffset/10 + "px";
                 }
 
                 if (window.pageYOffset > 0) {
                     line1.style.opacity = 1 - (window.pageYOffset / 250);
                     line2.style.opacity = 1 - (window.pageYOffset / 250);
                     txt.style.opacity = 1 - (window.pageYOffset / 260);
+                    arrow.style.opacity = 1 - (window.pageYOffset / 300);
                 }
                 else {
                     line1.style.opacity = "1";
