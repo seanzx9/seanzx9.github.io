@@ -59,7 +59,6 @@
 /*for home page*/
 #home {
 	background-color: #64778d;
-	font-size: 10vh;
 	height: 100vh;
 	min-height: 350px;
 	text-align: left;
@@ -69,8 +68,10 @@
 
 #welcome-txt {
 	background-color: transparent;
+	font-size: 10vh;
 	position: absolute;
 	top: 32%;
+	left: 15px;
 	z-index: 4;
 }
 
@@ -100,7 +101,6 @@
 		margin: 0;
 		position: absolute;
 		top: 40%;
-		width: 225px;
 		z-index: 3;
 	}
 
@@ -111,7 +111,6 @@
 		margin: 0;
 		position: absolute;
 		top: 55%;
-		width: 360px;
 		z-index: 3;
 	}
 
@@ -276,7 +275,6 @@
 		margin: 0;
 		position: absolute;
 		top: 40%;
-		width: 215px;
 		z-index: -1;
 	}
 
@@ -287,7 +285,6 @@
 		margin: 0;
 		position: absolute;
 		top: 55%;
-		width: 335px;
 		z-index: -1;
 	}
 
@@ -307,7 +304,7 @@
 	#about {
 		background-color: #729799;
 		height: 90%;
-		padding: 10vh 10px 0 10px;
+		padding: 0vh 10px 0 0px;
 		text-align: center;
 	}
 

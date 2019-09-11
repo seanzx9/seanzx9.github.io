@@ -126,6 +126,8 @@ window.onload = function () {
         if (typed === false) {
             disableScrolling();
             if (i < 6) {
+                line1.style.width = txt.clientWidth + 25 + "px";
+                line1w = txt.clientWidth + 25;
                 txt.innerHTML += hello.charAt(i);
                 i++;
                 setTimeout(welcomeMessage, 100);
@@ -137,6 +139,8 @@ window.onload = function () {
                 setTimeout(welcomeMessage, 600);
             }
             else if (i > 6 && i < hello.length) {
+                line2.style.width = txt.clientWidth + 25 + "px";
+                line2w = txt.clientWidth + 25;
                 txt.innerHTML += hello.charAt(i);
                 i++;
                 setTimeout(welcomeMessage, 100);
@@ -182,82 +186,112 @@ window.onload = function () {
     }, 400);
 
     //follows scroll to delete characters or change lines or hide about me content
-    setInterval(function () {
+    window.onscroll = function() {
         if (typed === true) {
-            //don't extend if past page width
-            if (line2w + (5 * window.pageYOffset) < document.getElementById("home").scrollWidth - 20) {
-                line1.style.width = line1w + (5 * window.pageYOffset) + "px";
-                line2.style.width = line2w + (5 * window.pageYOffset) + "px";
-            }
+            if (window.innerWidth > 768) {
+                //extend lines and don't extend if past page width
+                if (line1w + (5 * window.pageYOffset) < window.innerWidth - 40)
+                    line1.style.width = line1w + (5 * window.pageYOffset) + "px";
 
-            if (window.pageYOffset > 290) {
-                txt.innerHTML = "";
-                line1.style.opacity = "0.05";
-                line2.style.opacity = "0.05";
-            }
-            else if (window.pageYOffset >= 280) {
-                txt.innerHTML = "<br />" + hello.substring(12, 13);
-                line1.style.opacity = "0.1";
-                line2.style.opacity = "0.1";
-            }
-            else if (window.pageYOffset >= 270) {
-                txt.innerHTML = "<br />" + hello.substring(11, 13);
-                line1.style.opacity = "0.15";
-                line2.style.opacity = "0.15";
-            }
-            else if (window.pageYOffset >= 250) {
-                txt.innerHTML = "<br />" + hello.substring(9, 9) + hello.substring(10, 13);
-                line1.style.opacity = "0.2";
-                line2.style.opacity = "0.2";
-            }
-            else if (window.pageYOffset >= 220) {
-                txt.innerHTML = hello.substring(3, 4) + "<br />" + hello.substring(8, 9) + hello.substring(10, 13);
-                line1.style.opacity = "0.25";
-                line2.style.opacity = "0.25";
-            }
-            else if (window.pageYOffset >= 190) {
-                txt.innerHTML = hello.substring(3, 4) + "<br />" + hello.substring(7, 9) + hello.substring(10, 13);
-                line1.style.opacity = "0.3";
-                line2.style.opacity = "0.3";
-            }
-            else if (window.pageYOffset >= 160) {
-                txt.innerHTML = hello.substring(3, 5) + "<br />" + hello.substring(7, 9) + hello.substring(10, 13) + hello.substring(15, 15);
-                line1.style.opacity = "0.4";
-                line2.style.opacity = "0.4";
-            }
-            else if (window.pageYOffset >= 130) {
-                txt.innerHTML = hello.substring(2, 5) + "<br />" + hello.substring(7, 9) + hello.substring(10, 13) + hello.substring(15, 15);
-                line1.style.opacity = "0.5";
-                line2.style.opacity = "0.5";
-            }
-            else if (window.pageYOffset >= 100) {
-                txt.innerHTML = hello.substring(2, 6) + "<br />" + hello.substring(7, 9) + hello.substring(10, 13) + hello.substring(15, 16);
-                line1.style.opacity = "0.6";
-                line2.style.opacity = "0.6";
-            }
-            else if (window.pageYOffset >= 70) {
-                txt.innerHTML = hello.substring(2, 6) + "<br />" + hello.substring(7, 9) + hello.substring(10, 14) + hello.substring(15, 16);
-                line1.style.opacity = "0.7";
-                line2.style.opacity = "0.7";
-            }
-            else if (window.pageYOffset >= 40) {
-                txt.innerHTML = hello.substring(2, 6) + "<br />" + hello.substring(7, 9) + hello.substring(10, 16);
-                line1.style.opacity = "0.8";
-                line2.style.opacity = "0.8";
+                if (line2w + (5 * window.pageYOffset) < window.innerWidth - 40)
+                    line2.style.width = line2w + (5 * window.pageYOffset) + "px";
 
-            }
-            else if (window.pageYOffset >= 10) {
-                txt.innerHTML = hello.substring(1, 6) + "<br />" + hello.substring(7, 16);
-                line1.style.opacity = "0.9";
-                line2.style.opacity = "0.9";
+                if (txt.clientWidth + (3 * window.pageYOffset) < window.innerWidth) {
+                    console.log("Compare: " + window.innerWidth * (window.pageYOffset + 1) + "\nWidth: " + window.innerWidth);
+                    txt.style.left = 15 + (window.pageYOffset * 2.5) + "px";
+                    txt.style.fontSize = ((window.pageYOffset / 30) + 1 * 10) + "vh";
+                    txt.style.top = 32 - (window.pageYOffset / 20) + "%";
+                    line1.style.top = 40 - (window.pageYOffset / 40) + "%";
+                    line2.style.top = 55 + (window.pageYOffset / 36) + "%";
+                }
+
+                if (window.pageYOffset > 0) {
+                    line1.style.opacity = 1 - (window.pageYOffset / 250);
+                    line2.style.opacity = 1 - (window.pageYOffset / 250);
+                    txt.style.opacity = 1 - (window.pageYOffset / 260);
+                }
+                else {
+                    line1.style.opacity = "1";
+                    line2.style.opacity = "1";
+                }
             }
             else {
-                txt.innerHTML = hello.substring(0, 6) + "<br />" + hello.substring(7, 16);
-                line1.style.opacity = "1";
-                line2.style.opacity = "1";
+                if (line1w > 0)
+                    line1.style.width = line1w - (window.pageYOffset) + "px";
+
+                if (line2w > 0)
+                    line2.style.width = line2w - (window.pageYOffset) + "px";
+
+                //delete characters as scrolling
+                if (window.pageYOffset > 290) {
+                    txt.innerHTML = "";
+                    line1.style.opacity = "0.05";
+                    line2.style.opacity = "0.05";
+                }
+                else if (window.pageYOffset >= 280) {
+                    txt.innerHTML = "<br />" + hello.substring(12, 13);
+                    line1.style.opacity = "0.1";
+                    line2.style.opacity = "0.1";
+                }
+                else if (window.pageYOffset >= 270) {
+                    txt.innerHTML = "<br />" + hello.substring(11, 13);
+                    line1.style.opacity = "0.15";
+                    line2.style.opacity = "0.15";
+                }
+                else if (window.pageYOffset >= 250) {
+                    txt.innerHTML = "<br />" + hello.substring(9, 9) + hello.substring(10, 13);
+                    line1.style.opacity = "0.2";
+                    line2.style.opacity = "0.2";
+                }
+                else if (window.pageYOffset >= 220) {
+                    txt.innerHTML = hello.substring(3, 4) + "<br />" + hello.substring(8, 9) + hello.substring(10, 13);
+                    line1.style.opacity = "0.25";
+                    line2.style.opacity = "0.25";
+                }
+                else if (window.pageYOffset >= 190) {
+                    txt.innerHTML = hello.substring(3, 4) + "<br />" + hello.substring(7, 9) + hello.substring(10, 13);
+                    line1.style.opacity = "0.3";
+                    line2.style.opacity = "0.3";
+                }
+                else if (window.pageYOffset >= 160) {
+                    txt.innerHTML = hello.substring(3, 5) + "<br />" + hello.substring(7, 9) + hello.substring(10, 13) + hello.substring(15, 15);
+                    line1.style.opacity = "0.4";
+                    line2.style.opacity = "0.4";
+                }
+                else if (window.pageYOffset >= 130) {
+                    txt.innerHTML = hello.substring(2, 5) + "<br />" + hello.substring(7, 9) + hello.substring(10, 13) + hello.substring(15, 15);
+                    line1.style.opacity = "0.5";
+                    line2.style.opacity = "0.5";
+                }
+                else if (window.pageYOffset >= 100) {
+                    txt.innerHTML = hello.substring(2, 6) + "<br />" + hello.substring(7, 9) + hello.substring(10, 13) + hello.substring(15, 16);
+                    line1.style.opacity = "0.6";
+                    line2.style.opacity = "0.6";
+                }
+                else if (window.pageYOffset >= 70) {
+                    txt.innerHTML = hello.substring(2, 6) + "<br />" + hello.substring(7, 9) + hello.substring(10, 14) + hello.substring(15, 16);
+                    line1.style.opacity = "0.7";
+                    line2.style.opacity = "0.7";
+                }
+                else if (window.pageYOffset >= 40) {
+                    txt.innerHTML = hello.substring(2, 6) + "<br />" + hello.substring(7, 9) + hello.substring(10, 16);
+                    line1.style.opacity = "0.8";
+                    line2.style.opacity = "0.8";
+
+                }
+                else if (window.pageYOffset >= 10) {
+                    txt.innerHTML = hello.substring(1, 6) + "<br />" + hello.substring(7, 16);
+                    line1.style.opacity = "0.9";
+                    line2.style.opacity = "0.9";
+                }
+                else {
+                    txt.innerHTML = hello.substring(0, 6) + "<br />" + hello.substring(7, 16);
+                    line1.style.opacity = "1";
+                    line2.style.opacity = "1";
+                }
             }
         }
-    }, 1);
+    };
 
     //goes through about me text
     //letter goes to 2 to highlight background
