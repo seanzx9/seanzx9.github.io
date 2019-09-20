@@ -234,9 +234,9 @@
 
 	.project-img {
 		border: 8px outset #e25b4b;
+		opacity: 0;
 		width: auto;
 		height: 300px;
-		display: none;
 		vertical-align: middle;
 	}
 
@@ -384,9 +384,9 @@
 
 	.project-img {
 		border: 8px outset #e25b4b;
-		display: none;
 		height: 150px;
 		margin-top: 150px;
+		opacity: 0;
 		width: auto;
 		vertical-align: middle;
 	}
@@ -434,18 +434,13 @@
 
 /*header for all projects in divider*/
 #project-header {
-	display: none;
+	display: inherit;
 	font-size: 10vh;
+	opacity: 0;
 	position: absolute;
 	width: auto;
 	padding: 80px 15px 100px 0;
 	z-index: 2;
-}
-
-/*title slide in from the left when hovered over*/
-.project-wrapper:hover .project-title-overlay {
-	width: 100%;
-	right: 0;
 }
 
 /*overlay for the title of the project*/
@@ -459,12 +454,6 @@
 	width: 0;
 	height: 100%;
 	transition: .5s ease;
-}
-
-/*slide in from the right when hovered over*/
-.project-wrapper:hover .project-desc-overlay {
-	width: 100%;
-	left: 0;
 }
 
 /*overlay for the project descriptions*/

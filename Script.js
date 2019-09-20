@@ -46,81 +46,94 @@ window.onload = function () {
     var pfp = document.getElementById("me-pic");
     var aboutTxt = document.getElementById("about-txt");
     var opacityPercent = 0.9;
-    
-    //wait for scroll
-    $(document).on("scroll", function () {
-        if ($(this).scrollTop() >= $('#project-header').position().top + 1000) {
-            $('#project-header').fadeIn(1000);
-        } 
-        if (window.innerWidth > 768) {
-            if ($(this).scrollTop() >= $('#DDS').position().top + 1900) {
-                $('#DDS').fadeIn(1000);
-            }
-            if ($(this).scrollTop() >= $('#trip-planner-img').position().top + 2800) {
-                $('#trip-planner-img').fadeIn(1000);
-            }
-            if ($(this).scrollTop() >= $('#FMS').position().top + 3500) {
-                $('#FMS').fadeIn(1000);
-            }
-            if ($(this).scrollTop() >= $('#MDD').position().top + 4200) {
-                $('#MDD').fadeIn(1000);
-            }
-            if ($(this).scrollTop() >= $('#clk-img').position().top + 4900) {
-                $('#clk-img').fadeIn(1000);
-            }
-        }
-        else {
-            if ($(this).scrollTop() >= $('#DDS').position().top + 1900) {
-                $('#DDS').fadeIn(1000);
-            }
-            if ($(this).scrollTop() >= $('#trip-planner-img').position().top + 2450) {
-                $('#trip-planner-img').fadeIn(1000);
-            }
-            if ($(this).scrollTop() >= $('#FMS').position().top + 3000) {
-                $('#FMS').fadeIn(1000);
-            }
-            if ($(this).scrollTop() >= $('#MDD').position().top + 3550) {
-                $('#MDD').fadeIn(1000);
-            }
-            if ($(this).scrollTop() >= $('#clk-img').position().top + 4100) {
-                $('#clk-img').fadeIn(1000);
-            }
-        }
-        
 
-        //fade out when scrolled down
-        if (window.innerWidth > 768) {
-            if (window.pageYOffset < innerHeight * 1.3)
-                opacityPercent = 0.9;
-            else if (window.pageYOffset > innerHeight * 1.85)
-                opacityPercent = -0.1;
-            else if (window.pageYOffset > innerHeight * 1.8)
-                opacityPercent = 0.05;
-            else if (window.pageYOffset > innerHeight * 1.75)
-                opacityPercent = 0.1;
-            else if (window.pageYOffset > innerHeight * 1.7)
-                opacityPercent = 0.2;
-            else if (window.pageYOffset > innerHeight * 1.65)
-                opacityPercent = 0.3;
-            else if (window.pageYOffset > innerHeight * 1.6)
-                opacityPercent = 0.4;
-            else if (window.pageYOffset > innerHeight * 1.55)
-                opacityPercent = 0.5;
-            else if (window.pageYOffset > innerHeight * 1.5)
-                opacityPercent = 0.6;
-            else if (window.pageYOffset > innerHeight * 1.45)
-                opacityPercent = 0.65;
-            else if (window.pageYOffset > innerHeight * 1.4)
-                opacityPercent = 0.7;
-            else if (window.pageYOffset > innerHeight * 1.35)
-                opacityPercent = 0.75;
-            else if (window.pageYOffset > innerHeight * 1.3)
-                opacityPercent = 0.8;
+    //fade in project head and project images
+    var projHeader = document.getElementById("project-header")
+    var img = document.querySelectorAll(".project-img")
+    var title = document.querySelectorAll(".project-title-overlay");
+    var desc = document.querySelectorAll(".project-desc-overlay")
 
-            pfp.style.opacity = opacityPercent;
-            aboutTxt.style.opacity = opacityPercent + 0.1;
-        }
-    })
+    //check if element on screen
+    function checkVisible(elm) {
+        var rect = elm.getBoundingClientRect();
+        var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+        return !(rect.bottom < 0 || rect.top - viewHeight + (viewHeight * 0.2) >= 0);
+    }
+
+    //fades in an element
+    function show(element) {
+        var goIn = setInterval(function () {
+            if (element.style.opacity < 0.02) {
+                element.style.opacity = "0.02";
+            }
+            else if (element.style.opacity < 0.06) {
+                element.style.opacity = "0.06";
+            }
+            else if (element.style.opacity < 0.1) {
+                element.style.opacity = "0.1";
+            }
+            else if (element.style.opacity < 0.12) {
+                element.style.opacity = "0.12";
+            }
+            else if (element.style.opacity < 0.15) {
+                element.style.opacity = "0.15";
+            }
+            else if (element.style.opacity < 0.18) {
+                element.style.opacity = "0.18";
+            }
+            else if (element.style.opacity < 0.2) {
+                element.style.opacity = "0.2";
+            }
+            else if (element.style.opacity < 0.25) {
+                element.style.opacity = "0.25";
+            }
+            else if (element.style.opacity < 0.3) {
+                element.style.opacity = "0.3";
+            }
+            else if (element.style.opacity < 0.35) {
+                element.style.opacity = "0.35";
+            }
+            else if (element.style.opacity < 0.4) {
+                element.style.opacity = "0.4";
+            }
+            else if (element.style.opacity < 0.45) {
+                element.style.opacity = "0.45";
+            }
+            else if (element.style.opacity < 0.5) {
+                element.style.opacity = "0.5";
+            }
+            else if (element.style.opacity < 0.55) {
+                element.style.opacity = "0.55";
+            }
+            else if (element.style.opacity < 0.6) {
+                element.style.opacity = "0.6";
+            }
+            else if (element.style.opacity < 0.65) {
+                element.style.opacity = "0.65";
+            }
+            else if (element.style.opacity < 0.7) {
+                element.style.opacity = "0.7";
+            }
+            else if (element.style.opacity < 0.75) {
+                element.style.opacity = "0.75";
+            }
+            else if (element.style.opacity < 0.8) {
+                element.style.opacity = "0.8";
+            }
+            else if (element.style.opacity < 0.85) {
+                element.style.opacity = "0.85";
+            }
+            else if (element.style.opacity < 0.9) {
+                element.style.opacity = "0.9";
+            }
+            else if (element.style.opacity < 1) {
+                element.style.opacity = "1";
+            }
+            else {
+                clearInterval(goIn);
+            }
+        }, 100);
+    }
 
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
@@ -174,12 +187,12 @@ window.onload = function () {
         }
     }
 
-    //disables scrolling with overflow
+    //disables scrolling 
     function disableScrolling() {
         body.style.overflow = "hidden";
     }
 
-    //enables scrolling with overflow
+    //enables scrolling 
     function enableScrolling() {
         body.style.overflow = "initial";
     }
@@ -213,7 +226,7 @@ window.onload = function () {
         }
     }, 10);
 
-    //follows scroll to change welcome screen
+    //follows scroll 
     window.onscroll = function() {
         if (typed === true) {
             if (window.innerWidth > 768) {
@@ -225,14 +238,13 @@ window.onload = function () {
                     line2.style.width = line2w + (5 * window.pageYOffset) + "px";
 
                 if (txt.clientWidth + (3 * window.pageYOffset) < window.innerWidth) {
-                    console.log("Compare: " + window.innerWidth * (window.pageYOffset + 1) + "\nWidth: " + window.innerWidth);
                     txt.style.left = 15 + (window.pageYOffset * 2.5) + "px";
                     txt.style.fontSize = ((window.pageYOffset / 30) + 1 * 10) + "vh";
                     txt.style.top = 32 - (window.pageYOffset / 20) + "%";
                     line1.style.top = 40 - (window.pageYOffset / 35) + "%";
                     line2.style.top = 55 + (window.pageYOffset / 44) + "%";
-                    line1.style.borderTopWidth = 10 + window.pageYOffset/10 + "px";
-                    line2.style.borderTopWidth = 10 + window.pageYOffset/10 + "px";
+                    line1.style.borderTopWidth = 10 + window.pageYOffset / 10 + "px";
+                    line2.style.borderTopWidth = 10 + window.pageYOffset / 10 + "px";
                 }
 
                 if (window.pageYOffset > 0) {
@@ -321,6 +333,63 @@ window.onload = function () {
                     line2.style.opacity = "1";
                 }
             }
+        }
+
+        //project divide
+        if (checkVisible(projHeader))
+            show(projHeader);
+        else
+            projHeader.style.opacity = "0";
+
+        //loop through all projects
+        for (var i = 0; i < img.length; i++) {
+            if (checkVisible(img[i])) {
+                show(img[i]);
+                title[i].style.width = "100%";
+                title[i].style.right = "0";
+                desc[i].style.width = "100%";
+                desc[i].style.left = "0";
+            }
+            else {
+                img[i].style.opacity = "0";
+                title[i].style.width = "0";
+                title[i].style.right = "100%";
+                desc[i].style.width = "0";
+                desc[i].style.left = "100%";
+            }
+        }
+
+        //fade out about page when scrolled down
+        if (window.innerWidth > 768) {
+            if (window.pageYOffset < innerHeight * 1.3)
+                opacityPercent = 0.9;
+            else if (window.pageYOffset > innerHeight * 1.85)
+                opacityPercent = -0.1;
+            else if (window.pageYOffset > innerHeight * 1.8)
+                opacityPercent = 0.05;
+            else if (window.pageYOffset > innerHeight * 1.75)
+                opacityPercent = 0.1;
+            else if (window.pageYOffset > innerHeight * 1.7)
+                opacityPercent = 0.2;
+            else if (window.pageYOffset > innerHeight * 1.65)
+                opacityPercent = 0.3;
+            else if (window.pageYOffset > innerHeight * 1.6)
+                opacityPercent = 0.4;
+            else if (window.pageYOffset > innerHeight * 1.55)
+                opacityPercent = 0.5;
+            else if (window.pageYOffset > innerHeight * 1.5)
+                opacityPercent = 0.6;
+            else if (window.pageYOffset > innerHeight * 1.45)
+                opacityPercent = 0.65;
+            else if (window.pageYOffset > innerHeight * 1.4)
+                opacityPercent = 0.7;
+            else if (window.pageYOffset > innerHeight * 1.35)
+                opacityPercent = 0.75;
+            else if (window.pageYOffset > innerHeight * 1.3)
+                opacityPercent = 0.8;
+
+            pfp.style.opacity = opacityPercent;
+            aboutTxt.style.opacity = opacityPercent + 0.1;
         }
     };
 
