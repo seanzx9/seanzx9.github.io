@@ -21,10 +21,10 @@ window.onload = function () {
     var index = 0;
     var letter = -2;
     var me = [
-        "Let's make this short and sweet.",
+        "Let's make this short.",
         "I'm a student at Stony Brook University.",
-        "I major in Computer Engineering.  and minor in Enviromental Design, Policy, and Planning.",
-        "In short, I'm into tech and the environment.",
+        "I major in Computer Engineering.",
+        "I'm always open to learning something new.",
         "Scroll down to check out my projects!" +
         "Or keep clicking/tapping...",
         "A little more about me...",
@@ -227,7 +227,7 @@ window.onload = function () {
     }, 10);
 
     //follows scroll 
-    window.onscroll = function() {
+    window.onscroll = function () {
         if (typed === true) {
             if (window.innerWidth > 768) {
                 //extend lines and don't extend if past page width
@@ -442,17 +442,10 @@ window.onload = function () {
                 else if (index === 2) {
                     about.innerHTML += me[index].charAt(letter);
                     letter++;
-                    if (letter === 32) {
-                        setTimeout(intro, 700);
-                    }
-                    else if (letter === 33) {
-                        about.innerHTML = about.innerHTML.substring(0, 31);
-                        setTimeout(intro, 100);
-                    }
-                    else if (letter === me[index].length) {
+                    if (letter === me[index].length) {
                         index++;
                         letter = -2;
-                        setTimeout(intro, 1500);
+                        setTimeout(intro, 1400);
                     }
                     else
                         setTimeout(intro, 80);
