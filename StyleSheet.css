@@ -1,5 +1,5 @@
 ﻿body, html {
-	background-color: #729799;
+	background-color: #444f5e;
 	color: #ecfdff;
 	font-family: 'Righteous', cursive;
 	font-size: 15px;
@@ -45,7 +45,7 @@
 	.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover,
 	.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a:hover,
 	.navbar-dark .navbar-nav .nav-link.active {
-		color: #e25b4b;
+		color: #ba411f;
 	}
 
 #bottom-nav {
@@ -58,7 +58,7 @@
 
 /*for home page*/
 #home {
-	background-color: #64778d;
+	background-color: #071425;
 	height: 100vh;
 	min-height: 350px;
 	text-align: left;
@@ -97,7 +97,7 @@
 	#line1 {
 		display: inline-block;
 		height: 100%;
-		border-top: 10px solid #e25b4b;
+		border-top: 10px solid #ba411f;
 		margin: 0;
 		position: absolute;
 		top: 40%;
@@ -107,7 +107,7 @@
 	#line2 {
 		display: inline-block;
 		height: 100%;
-		border-top: 10px solid #e25b4b;
+		border-top: 10px solid #ba411f;
 		margin: 0;
 		position: absolute;
 		top: 55%;
@@ -117,7 +117,7 @@
 	#arrow {
 		background-color: transparent;
 		bottom: 20px;
-		color: #e25b4b;
+		color: #ba411f;
 		font-size: 230px;
 		position: absolute;
 		transform: rotate(180deg);
@@ -128,7 +128,7 @@
 	}
 
 	#about {
-		background-color: #729799;
+		background-color: #444f5e;
 		height: 95%;
 		margin-top: 50px;
 		padding: 5% 10px;
@@ -167,7 +167,7 @@
 	}
 
 	#projects {
-		background-color: #729799;
+		background-color: #444f5e;
 		display: inline-block;
 		min-height: 500vh;
 		padding-left: 0;
@@ -233,7 +233,7 @@
 	}
 
 	.project-img {
-		border: 8px outset #e25b4b;
+		border: 8px outset #ba411f;
 		opacity: 0;
 		width: auto;
 		height: 300px;
@@ -271,7 +271,7 @@
 	#line1 {
 		display: inline-block;
 		height: 100%;
-		border-top: 10px solid #e25b4b;
+		border-top: 10px solid #ba411f;
 		margin: 0;
 		position: absolute;
 		top: 40%;
@@ -281,7 +281,7 @@
 	#line2 {
 		display: inline-block;
 		height: 100%;
-		border-top: 10px solid #e25b4b;
+		border-top: 10px solid #ba411f;
 		margin: 0;
 		position: absolute;
 		top: 55%;
@@ -291,7 +291,7 @@
 	#arrow {
 		background-color: transparent;
 		bottom: 20px;
-		color: #e25b4b;
+		color: #ba411f;
 		font-size: 230px;
 		position: absolute;
 		transform: rotate(180deg);
@@ -302,7 +302,7 @@
 	}
 
 	#about {
-		background-color: #729799;
+		background-color: #444f5e;
 		height: 90%;
 		padding: 0vh 10px 0 0px;
 		text-align: center;
@@ -329,7 +329,7 @@
 	}
 
 	#projects {
-		background-color: #729799;
+		background-color: #444f5e;
 		min-height: 300vh;
 		padding-left: 0;
 		padding-right: 0;
@@ -383,7 +383,7 @@
 	}
 
 	.project-img {
-		border: 8px outset #e25b4b;
+		border: 8px outset #ba411f;
 		height: 150px;
 		margin-top: 150px;
 		opacity: 0;
@@ -425,7 +425,7 @@
 
 /*orange boxes in divider*/
 .box {
-	background-color: #e25b4b;
+	background-color: #ba411f;
 	float: left;
 	margin-left: 0.1%;
 	margin-right: 0.1%;
@@ -470,7 +470,7 @@
 }
 
 #footer {
-	background-color: #565656;
+	background-color: #071425;
 	margin-bottom: 0;
 	color: #ffffff;
 	display: table;
