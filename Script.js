@@ -215,6 +215,8 @@ window.onload = function () {
 
     //follows scroll 
     window.onscroll = function () {
+        var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
         if (typed === true) {
             if (window.innerWidth > 768) {
                 //extend lines and don't extend if past page width
@@ -332,17 +334,13 @@ window.onload = function () {
         for (var i = 0; i < img.length; i++) {
             if (checkVisible(img[i])) {
                 show(img[i]);
-                title[i].style.width = "100%";
-                title[i].style.right = "0";
-                desc[i].style.width = "100%";
-                desc[i].style.left = "0";
+                show(title[i]);
+                show(desc[i]);
             }
             else {
                 img[i].style.opacity = "0";
-                title[i].style.width = "0";
-                title[i].style.right = "100%";
-                desc[i].style.width = "0";
-                desc[i].style.left = "100%";
+                title[i].style.opacity = "0";
+                desc[i].style.opacity = "0";
             }
         }
 
@@ -378,19 +376,16 @@ window.onload = function () {
             pfp.style.opacity = opacityPercent;
             aboutTxt.style.opacity = opacityPercent + 0.1;
         }
-    };
 
-    //goes through about me text
-    //letter goes to 2 to highlight background
-    //letter goes to 1 when deleting text
-    this.setInterval(function () {
-        var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         if (scrollTop >= windowHeight && !scrolled) {
             scrolled = true;
             intro();
         }
-    }, 10);
-    
+    };
+
+    //goes through about me text
+    //letter goes to 2 to highlight background
+    //letter goes to 1 when deleting text  
     function intro() {
         //loop through all off array
         if (index < me.length) {
@@ -416,7 +411,7 @@ window.onload = function () {
                     if (letter === me[index].length) {
                         index++;
                         letter = -2;
-                        setTimeout(intro, 1400);
+                        setTimeout(intro, 1000);
                     }
                     else
                         setTimeout(intro, 80);

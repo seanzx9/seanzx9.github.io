@@ -7,6 +7,7 @@
 	margin: 0;
 	width: 100%;
 	position: relative;
+	transition: .1s ease;
 	z-index: 2;
 }
 
@@ -138,8 +139,8 @@
 
 	#me-pic {
 		display: inline-block;
-		opacity: 0.9;
-		width: 400px;
+		opacity: 0.95;
+		width: 25%;
 		height: auto;
 		left: 12%;
 		position: fixed;
@@ -148,6 +149,7 @@
 		-ms-transform: translateY(-50%);
 		vertical-align: middle;
 		z-index: 1;
+		transition: .3s ease;
 	}
 
 	#about-txt {
@@ -164,6 +166,7 @@
 		-ms-transform: translateY(-50%);
 		vertical-align: middle;
 		z-index: 1;
+		transition: .3s ease;
 	}
 
 	#projects {
@@ -238,6 +241,7 @@
 		width: auto;
 		height: 300px;
 		vertical-align: middle;
+		transition: .3s ease;
 	}
 
 	.project-title {
@@ -310,9 +314,10 @@
 
 	#me-pic {
 		display: inline-block;
-		opacity: 0.9;
+		opacity: 0.95;
 		width: 300px;
 		height: auto;
+		transition: .3s ease;
 	}
 
 	#about-txt {
@@ -321,6 +326,7 @@
 		padding: 0;
 		margin: 0;
 		font-size: 20px;
+		transition: .3s ease;
 	}
 
 	#project-break {
@@ -339,7 +345,7 @@
 		margin: 0 auto;
 		position: relative;
 		width: 90%;
-		height: 90vh;
+		height: 80vh;
 		overflow: hidden;
 	}
 
@@ -389,6 +395,7 @@
 		opacity: 0;
 		width: auto;
 		vertical-align: middle;
+		transition: .3s ease;
 	}
 
 	#trip-planner-img {
@@ -440,32 +447,31 @@
 	position: absolute;
 	width: auto;
 	padding: 80px 15px 100px 0;
+	transition: .3s ease;
 	z-index: 2;
 }
 
 /*overlay for the title of the project*/
 .project-title-overlay {
 	background-color: transparent;
+	display: inherit;
 	position: absolute;
-	right: 100%;
-	left: 0;
 	min-height: 600px;
 	overflow: hidden;
-	width: 0;
-	height: 100%;
+	opacity: 0;
+	width: 100%;
 	transition: .5s ease;
 }
 
 /*overlay for the project descriptions*/
 .project-desc-overlay {
 	background-color: transparent;
+	display: inherit;
 	position: absolute;
-	left: 100%;
-	right: 0;
 	min-height: 500px;
 	overflow: hidden;
-	width: 0;
-	height: 100%;
+	opacity: 0;
+	width: 100%;
 	transition: .3s ease;
 }
 
