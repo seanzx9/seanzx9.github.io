@@ -1,6 +1,6 @@
 ﻿body, html {
 	background-color: #444f5e;
-	color: #ecfdff;
+	color: #fbfcfc;
 	font-family: 'Righteous', cursive;
 	font-size: 15px;
 	height: 100%;
@@ -13,7 +13,7 @@
 /*navbar styling*/
 .navbar-dark {
 	background-color: transparent;
-	color: #ecfdff;
+	color: #fbfcfc;
 	font-size: 25px;
 	z-index: 100;
 }
@@ -38,7 +38,7 @@
 /*color of the bottom navbar links*/
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a {
-	color: #ecfdff;
+	color: #fbfcfc;
 }
 
 	/*for hovering over navbar links*/

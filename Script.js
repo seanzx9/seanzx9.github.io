@@ -21,37 +21,24 @@ window.onload = function () {
     var index = 0;
     var letter = -2;
     var me = [
-        "Let's make this short.",
         "I'm a student at Stony Brook University.",
         "I major in Computer Engineering.",
-        "I'm always open to learning something new.",
-        "Scroll down to check out my projects!" +
-        "Or keep clicking/tapping...",
-        "A little more about me...",
-        "My favorite color is green." +
-        "I practice mixed martial arts." +
-        "I like soccer." +
-        "Mangos are my favorite fruit." +
-        "Is that enough?",
-        "No?",
-        "Well feel free to contact me and we can talk some more!",
-        "Now go check out my projects.",
-        "I have no more to say here.",
-        "Really.",
-        "...",
-        "Contact me!",
-        ":)"
+        "My interests are in embedded systems, cloud computing, and machine learning.",
+        "But I'm always interested in exploring new things!",
+        "Scroll down to check out some of my projects!"
     ];
     //about me pic and text
     var pfp = document.getElementById("me-pic");
     var aboutTxt = document.getElementById("about-txt");
     var opacityPercent = 0.9;
+    var scrolled = false;
+    var windowHeight = window.innerHeight;
 
     //fade in project head and project images
-    var projHeader = document.getElementById("project-header")
-    var img = document.querySelectorAll(".project-img")
+    var projHeader = document.getElementById("project-header");
+    var img = document.querySelectorAll(".project-img");
     var title = document.querySelectorAll(".project-title-overlay");
-    var desc = document.querySelectorAll(".project-desc-overlay")
+    var desc = document.querySelectorAll(".project-desc-overlay");
 
     //check if element on screen
     function checkVisible(elm) {
@@ -396,14 +383,21 @@ window.onload = function () {
     //goes through about me text
     //letter goes to 2 to highlight background
     //letter goes to 1 when deleting text
-    about.addEventListener("click", intro);
+    this.setInterval(function () {
+        var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        if (scrollTop >= windowHeight && !scrolled) {
+            scrolled = true;
+            intro();
+        }
+    }, 10);
+    
     function intro() {
         //loop through all off array
         if (index < me.length) {
             //for highlighting text
             if (letter === -2) {
                 about.removeEventListener("click", intro);
-                about.style.backgroundColor = "#e25b4b";
+                about.style.backgroundColor = "#ba411f";
                 letter++;
                 setTimeout(intro, 500);
             }
@@ -416,97 +410,13 @@ window.onload = function () {
             }
             //for typing effect
             else if (letter < me[index].length) {
-                if (index === 0) {
-                    about.innerHTML += me[index].charAt(letter);
-                    letter++;
-                    if (letter === me[index].length) {
-                        index++;
-                        letter = -2;
-                        setTimeout(intro, 1200);
-                    }
-                    else
-                        setTimeout(intro, 80);
-                }
-                else if (index === 1) {
+                if (index >= 0) {
                     about.innerHTML += me[index].charAt(letter);
                     letter++;
                     if (letter === me[index].length) {
                         index++;
                         letter = -2;
                         setTimeout(intro, 1400);
-                    }
-                    else
-                        setTimeout(intro, 80);
-                }
-                //creates delay for major and minor
-                else if (index === 2) {
-                    about.innerHTML += me[index].charAt(letter);
-                    letter++;
-                    if (letter === me[index].length) {
-                        index++;
-                        letter = -2;
-                        setTimeout(intro, 1400);
-                    }
-                    else
-                        setTimeout(intro, 80);
-                }
-                //delay for brief summary
-                else if (index === 3) {
-                    about.innerHTML += me[index].charAt(letter);
-                    letter++;
-                    if (letter === 8) {
-                        setTimeout(intro, 400);
-                    }
-                    else if (letter === me[index].length) {
-                        index++;
-                        letter = -2;
-                        setTimeout(intro, 1600);
-                    }
-                    else
-                        setTimeout(intro, 80);
-                }
-                //continue about page or go to projects
-                else if (index === 4) {
-                    about.innerHTML += me[index].charAt(letter);
-                    letter++;
-                    if (letter === 37) {
-                        about.innerHTML += "<br/>";
-                        setTimeout(intro, 1400);
-                    }
-                    else
-                        setTimeout(intro, 80);
-                }
-                //let user know they're continuing
-                else if (index === 5) {
-                    about.innerHTML += me[index].charAt(letter);
-                    letter++;
-                    if (letter === me[index].length) {
-                        index++;
-                        letter = -2;
-                        setTimeout(intro, 1400);
-                    }
-                    else
-                        setTimeout(intro, 80);
-                }
-                //list some fun facts
-                else if (index === 6) {
-                    about.innerHTML += me[index].charAt(letter);
-                    letter++;
-                    if (letter === 27) {
-                        about.innerHTML += "<br/>";
-                        setTimeout(intro, 500);
-                    }
-                    else if (letter === 57) {
-                        about.innerHTML += "<br/>";
-                        setTimeout(intro, 500);
-                    }
-                    else if (letter === 71) {
-                        about.innerHTML += "<br/>";
-                        setTimeout(intro, 500);
-                    }
-                    else if (letter === 100) {
-                        about.innerHTML += "<br/>";
-                        setTimeout(intro, 500);
                     }
                     else
                         setTimeout(intro, 80);
