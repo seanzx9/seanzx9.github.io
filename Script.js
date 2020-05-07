@@ -23,7 +23,7 @@ window.onload = function () {
     var me = [
         "I'm a student at Stony Brook University.",
         "I major in Computer Engineering.",
-        "My interests are in cloud computing, machine learning, and embedded systems.",
+        "My interests are in software development, AI, and embedded systems.",
         "But I'm always interested in exploring new things!",
         "Scroll down to check out some of my projects!"
     ];
@@ -148,7 +148,7 @@ window.onload = function () {
         if (typed === false) {
             disableScrolling();
             if (i < 6) {
-                line1.style.width = txt.clientWidth + 25 + "px";
+                line1.style.width = 40 * i + 'px';
                 line1w = txt.clientWidth + 25;
                 txt.innerHTML += hello.charAt(i);
                 i++;
@@ -161,8 +161,8 @@ window.onload = function () {
                 setTimeout(welcomeMessage, 600);
             }
             else if (i > 6 && i < hello.length) {
-                line2.style.width = txt.clientWidth + 25 + "px";
-                line2w = txt.clientWidth + 25;
+                line2.style.width = 40 * (i - 7) + 'px';
+                line2w = txt.clientWidth + 15;
                 txt.innerHTML += hello.charAt(i);
                 i++;
                 setTimeout(welcomeMessage, 100);
