@@ -49,77 +49,13 @@ window.onload = function () {
 
     //fades in an element
     function show(element) {
-        var goIn = setInterval(function () {
-            if (element.style.opacity < 0.02) {
-                element.style.opacity = "0.02";
+        (function fade() {
+            var val = parseFloat(element.style.opacity);
+            if (!((val += .1) > 1)) {
+                element.style.opacity = val;
+                requestAnimationFrame(fade);
             }
-            else if (element.style.opacity < 0.06) {
-                element.style.opacity = "0.06";
-            }
-            else if (element.style.opacity < 0.1) {
-                element.style.opacity = "0.1";
-            }
-            else if (element.style.opacity < 0.12) {
-                element.style.opacity = "0.12";
-            }
-            else if (element.style.opacity < 0.15) {
-                element.style.opacity = "0.15";
-            }
-            else if (element.style.opacity < 0.18) {
-                element.style.opacity = "0.18";
-            }
-            else if (element.style.opacity < 0.2) {
-                element.style.opacity = "0.2";
-            }
-            else if (element.style.opacity < 0.25) {
-                element.style.opacity = "0.25";
-            }
-            else if (element.style.opacity < 0.3) {
-                element.style.opacity = "0.3";
-            }
-            else if (element.style.opacity < 0.35) {
-                element.style.opacity = "0.35";
-            }
-            else if (element.style.opacity < 0.4) {
-                element.style.opacity = "0.4";
-            }
-            else if (element.style.opacity < 0.45) {
-                element.style.opacity = "0.45";
-            }
-            else if (element.style.opacity < 0.5) {
-                element.style.opacity = "0.5";
-            }
-            else if (element.style.opacity < 0.55) {
-                element.style.opacity = "0.55";
-            }
-            else if (element.style.opacity < 0.6) {
-                element.style.opacity = "0.6";
-            }
-            else if (element.style.opacity < 0.65) {
-                element.style.opacity = "0.65";
-            }
-            else if (element.style.opacity < 0.7) {
-                element.style.opacity = "0.7";
-            }
-            else if (element.style.opacity < 0.75) {
-                element.style.opacity = "0.75";
-            }
-            else if (element.style.opacity < 0.8) {
-                element.style.opacity = "0.8";
-            }
-            else if (element.style.opacity < 0.85) {
-                element.style.opacity = "0.85";
-            }
-            else if (element.style.opacity < 0.9) {
-                element.style.opacity = "0.9";
-            }
-            else if (element.style.opacity < 1) {
-                element.style.opacity = "1";
-            }
-            else {
-                clearInterval(goIn);
-            }
-        }, 100);
+        })();
     }
 
     // Add smooth scrolling to all links
