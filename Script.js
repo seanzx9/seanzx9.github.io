@@ -51,7 +51,7 @@ window.onload = function () {
     function show(element) {
         (function fade() {
             var val = parseFloat(element.style.opacity);
-            if (!((val += .1) > 1)) {
+            if (!((val += 0.05) > 1)) {
                 element.style.opacity = val;
                 requestAnimationFrame(fade);
             }
@@ -179,6 +179,8 @@ window.onload = function () {
                     arrow.style.opacity = 1 - (window.pageYOffset / 300);
                 }
                 else {
+                    txt.style.opacity = "1";
+                    arrow.style.opacity = "1";
                     line1.style.opacity = "1";
                     line2.style.opacity = "1";
                 }
@@ -245,7 +247,6 @@ window.onload = function () {
                     txt.innerHTML = hello.substring(2, 6) + "<br />" + hello.substring(7, 9) + hello.substring(10, 16);
                     line1.style.opacity = "0.8";
                     line2.style.opacity = "0.8";
-
                 }
                 else if (window.pageYOffset >= 10) {
                     txt.innerHTML = hello.substring(1, 6) + "<br />" + hello.substring(7, 16);
