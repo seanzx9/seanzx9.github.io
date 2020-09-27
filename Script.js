@@ -51,7 +51,7 @@ window.onload = function () {
     function show(element) {
         (function fade() {
             var val = parseFloat(element.style.opacity);
-            if (!((val += 0.01) > 1)) {
+            if (!((val += 0.05) > 1)) {
                 element.style.opacity = val;
                 requestAnimationFrame(fade);
             }
