@@ -23,7 +23,7 @@ window.onload = function () {
     var me = [
         "I'm a student at Stony Brook University.",
         "I major in Computer Engineering.",
-        "My interests are in software development, AI, and embedded systems.",
+        "My interests are in software development, including app and systems design.",
         "But I'm always interested in exploring new things!",
         "Scroll down to check out some of my projects!"
     ];
