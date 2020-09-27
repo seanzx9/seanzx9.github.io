@@ -162,10 +162,10 @@ window.onload = function () {
                     line2.style.width = line2w - (window.pageYOffset) + "px";
 
                 if (window.pageYOffset > 0) {
-                    line1.style.opacity = 1 - (window.pageYOffset / 250);
-                    line2.style.opacity = 1 - (window.pageYOffset / 250);
-                    txt.style.opacity = 1 - (window.pageYOffset / 260);
-                    arrow.style.opacity = 1 - (window.pageYOffset / 300);
+                    line1.style.opacity = 1 - (window.pageYOffset / 400);
+                    line2.style.opacity = 1 - (window.pageYOffset / 400);
+                    txt.style.opacity = 1 - (window.pageYOffset / 400);
+                    arrow.style.opacity = 1 - (window.pageYOffset / 400);
                 }
                 else {
                     txt.style.opacity = "1";
