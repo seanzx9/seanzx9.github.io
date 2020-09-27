@@ -155,22 +155,11 @@ window.onload = function () {
 
         if (typed === true) {
             if (window.innerWidth > 768) {
-                //extend lines and don't extend if past page width
-                if (line1w + (5 * window.pageYOffset) < window.innerWidth - 40)
-                    line1.style.width = line1w + (5 * window.pageYOffset) + "px";
+                if (line1w > 0)
+                    line1.style.width = line1w - (window.pageYOffset) + "px";
 
-                if (line2w + (5 * window.pageYOffset) < window.innerWidth - 40)
-                    line2.style.width = line2w + (5 * window.pageYOffset) + "px";
-
-                if (txt.clientWidth + (3 * window.pageYOffset) < window.innerWidth) {
-                    txt.style.left = 15 + (window.pageYOffset * 2.5) + "px";
-                    txt.style.fontSize = ((window.pageYOffset / 30) + 1 * 10) + "vh";
-                    txt.style.top = 32 - (window.pageYOffset / 20) + "%";
-                    line1.style.top = 40 - (window.pageYOffset / 35) + "%";
-                    line2.style.top = 55 + (window.pageYOffset / 44) + "%";
-                    line1.style.borderTopWidth = 10 + window.pageYOffset / 10 + "px";
-                    line2.style.borderTopWidth = 10 + window.pageYOffset / 10 + "px";
-                }
+                if (line2w > 0)
+                    line2.style.width = line2w - (window.pageYOffset) + "px";
 
                 if (window.pageYOffset > 0) {
                     line1.style.opacity = 1 - (window.pageYOffset / 250);
