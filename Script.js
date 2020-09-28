@@ -155,10 +155,10 @@ window.onload = function () {
 
         if (typed === true) {
             if (window.innerWidth > 768) {
-                if (line1w > 0)
+                if (line1w > 0 && line1w < window.innerWidth)
                     line1.style.width = line1w + (window.pageYOffset) + "px";
 
-                if (line2w > 0)
+                if (line2w > 0 && line2w < window.innerWidth)
                     line2.style.width = line2w + (window.pageYOffset) + "px";
             }
             else {
