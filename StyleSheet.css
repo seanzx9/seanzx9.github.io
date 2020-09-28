@@ -1,0 +1,519 @@
+﻿body, html {
+	background-color: #444f5e;
+	color: #fbfcfc;
+	font-family: 'Righteous', cursive;
+	font-size: 15px;
+	height: 100%;
+	margin: 0;
+	width: 100%;
+	position: relative;
+	transition: .1s ease;
+	z-index: 2;
+}
+
+/*navbar styling*/
+.navbar-dark {
+	background-color: transparent;
+	color: #fbfcfc;
+	font-size: 25px;
+	z-index: 100;
+}
+
+.navbar-brand:hover .overlay {
+	width: 200px;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: transparent;
+	overflow: hidden;
+	width: 0;
+	height: 100%;
+	transition: .5s ease;
+}
+
+/*color of the bottom navbar links*/
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a {
+	color: #fbfcfc;
+}
+
+/*for hovering over navbar links*/
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+	color: #ba411f;
+}
+
+#bottom-nav {
+	background-color: transparent;
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
+	z-index: 100;
+}
+
+/*for home page*/
+#home {
+	background-color: #071425;
+	height: 100vh;
+	min-height: 350px;
+	text-align: left;
+	position: relative;
+	z-index: 2;
+}
+
+#welcome-txt {
+	background-color: transparent;
+	font-size: 10vh;
+	position: absolute;
+	top: 32%;
+	left: 15px;
+	z-index: 4;
+}
+
+/*computer*/
+@media screen and (min-width : 769px) {
+	#leo {
+		display: block;
+		width: 200px;
+		height: auto;
+	}
+
+	.text {
+		font-size: 40px;
+		position: absolute;
+		overflow: hidden;
+		top: 50%;
+		left: 55%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		white-space: nowrap;
+	}
+
+	#line1 {
+		display: inline-block;
+		height: 100%;
+		border-top: 10px solid #ba411f;
+		margin: 0;
+		position: absolute;
+		top: 40%;
+		z-index: 3;
+	}
+
+	#line2 {
+		display: inline-block;
+		height: 100%;
+		border-top: 10px solid #ba411f;
+		margin: 0;
+		position: absolute;
+		top: 55%;
+		z-index: 3;
+	}
+
+	#arrow {
+		background-color: transparent;
+		bottom: 20px;
+		color: #ba411f;
+		font-size: 230px;
+		position: absolute;
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		visibility: hidden;
+		margin: 0 auto;
+		width: 51.2%;
+	}
+
+	#about {
+		background-color: #444f5e;
+		height: 95%;
+		margin-top: 50px;
+		padding: 5% 10px;
+		text-align: center;
+		z-index: 0;
+	}
+
+	#me-pic {
+		display: inline-block;
+		opacity: 0.95;
+		width: 25%;
+		height: auto;
+		left: 12%;
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		vertical-align: middle;
+		z-index: 1;
+		transition: .3s ease;
+	}
+
+	#about-txt {
+		background-color: transparent;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		font-size: 40px;
+		width: 40%;
+		left: 52%;
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		vertical-align: middle;
+		z-index: 1;
+		transition: .3s ease;
+	}
+
+	#projects {
+		background-color: #444f5e;
+		display: inline-block;
+		min-height: 500vh;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 0;
+		z-index: 3;
+	}
+
+	#project-break {
+		text-align: right;
+		padding-top: 40vh;
+		padding-bottom: 50vh;
+		z-index: 2;
+	}
+
+	.project-wrapper {
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		min-height: 800px;
+		z-index: 2;
+	}
+
+	/*titles of the project*/
+	.project-title {
+		position: absolute;
+		overflow: visible;
+		top: 110px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+		font-weight: bold;
+		white-space: pre;
+	}
+
+	/*descriptions of the project*/
+	.project-desc {
+		position: absolute;
+		overflow: hidden;
+		top: 180px;
+		left: 50%;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		width: 70%;
+		white-space: pre-line;
+	}
+
+	.img-wrapper {
+		height: 300px;
+		white-space: nowrap;
+		text-align: center;
+		margin: 1em 0;
+	}
+
+	.temp {
+		display: inline-block;
+		height: 100%;
+	}
+
+	.project-img {
+		border: 8px outset #ba411f;
+		opacity: 0;
+		width: auto;
+		height: 300px;
+		vertical-align: middle;
+		transition: .3s ease;
+	}
+
+	.project-title {
+		font-size: 60px;
+	}
+
+	.project-desc {
+		font-size: 25px;
+	}
+}
+
+/*mobile*/
+@media screen and (max-width: 768px) {
+	#leo {
+		display: block;
+		width: 125px;
+		height: auto;
+	}
+
+	.text {
+		font-size: 30px;
+		position: absolute;
+		overflow: hidden;
+		top: 50%;
+		left: 35%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		white-space: nowrap;
+	}
+
+	#line1 {
+		display: inline-block;
+		height: 100%;
+		border-top: 10px solid #ba411f;
+		margin: 0;
+		position: absolute;
+		top: 40%;
+		z-index: -1;
+	}
+
+	#line2 {
+		display: inline-block;
+		height: 100%;
+		border-top: 10px solid #ba411f;
+		margin: 0;
+		position: absolute;
+		top: 55%;
+		z-index: -1;
+	}
+
+	#arrow {
+		background-color: transparent;
+		bottom: 20px;
+		color: #ba411f;
+		font-size: 230px;
+		position: absolute;
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		visibility: hidden;
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	#about {
+		background-color: #444f5e;
+		height: 90%;
+		padding: 0vh 10px 0 0px;
+		text-align: center;
+	}
+
+	#me-pic {
+		display: inline-block;
+		opacity: 0.95;
+		width: 300px;
+		height: auto;
+		transition: .3s ease;
+	}
+
+	#about-txt {
+		background-color: transparent;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		top: 90%;
+		width: 90%;
+		font-size: 20px;
+		transition: .3s ease;
+	}
+
+	#project-break {
+		text-align: center;
+		padding-bottom: 100px;
+	}
+
+	#projects {
+		background-color: #444f5e;
+		min-height: 300vh;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.project-wrapper {
+		margin: 0 auto;
+		position: relative;
+		width: 90%;
+		height: 80vh;
+		overflow: hidden;
+	}
+
+	/*titles of the project*/
+	.project-title {
+		position: absolute;
+		overflow: visible;
+		top: 120px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		width: 100%;
+		text-align: center;
+		font-weight: bold;
+		white-space: pre-line;
+	}
+
+	/*descriptions of the project*/
+	.project-desc {
+		position: absolute;
+		overflow: hidden;
+		top: 180px;
+		left: 50%;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		width: 100%;
+		white-space: pre-line;
+	}
+
+	.img-wrapper {
+		height: 150px;
+		white-space: nowrap;
+		text-align: center;
+		margin: 2em 0;
+	}
+
+	.temp {
+		display: inline-block;
+		height: 100%;
+	}
+
+	.project-img {
+		border: 8px outset #ba411f;
+		height: 150px;
+		margin-top: 150px;
+		opacity: 0;
+		width: auto;
+		vertical-align: middle;
+		transition: .3s ease;
+	}
+
+	#trip-planner-img {
+		height: 200px;
+		margin-top: 120px;
+	}
+
+	.project-title {
+		font-size: 30px;
+	}
+
+	.project-desc {
+		font-size: 15px;
+	}
+}
+
+/*to divide about me and projects page*/
+#project-break {
+	background-color: transparent;
+	height: 110vh;
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+/*row and box to create divider*/
+.row {
+	display: table;
+	width: 100%;
+}
+
+/*orange boxes in divider*/
+.box {
+	background-color: #ba411f;
+	float: left;
+	margin-left: 0.1%;
+	margin-right: 0.1%;
+	width: 9.8%;
+}
+
+/*header for all projects in divider*/
+#project-header {
+	display: inherit;
+	font-size: 10vh;
+	opacity: 0;
+	position: absolute;
+	width: auto;
+	padding: 80px 15px 100px 0;
+	transition: .3s ease;
+	z-index: 2;
+}
+
+/*overlay for the title of the project*/
+.project-title-overlay {
+	background-color: transparent;
+	display: inherit;
+	position: absolute;
+	min-height: 600px;
+	overflow: hidden;
+	opacity: 0;
+	width: 100%;
+	transition: .5s ease;
+}
+
+/*overlay for the project descriptions*/
+.project-desc-overlay {
+	background-color: transparent;
+	display: inherit;
+	position: absolute;
+	min-height: 500px;
+	overflow: hidden;
+	opacity: 0;
+	width: 100%;
+	transition: .3s ease;
+}
+
+#footer {
+	background-color: #071425;
+	margin-bottom: 0;
+	color: #ffffff;
+	display: table;
+	min-height: 50px;
+	opacity: 0.9;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+#contact-me {
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+.footer-ul {
+	list-style-type: none;
+	text-decoration: none;
+	padding: 0;
+}
+
+.footer-li {
+	display: inline-block;
+	padding: 10px;
+}
+
+.icon {
+	width: 40px;
+	height: 40px;
+	border: none;
+	opacity: 0.98;
+	transition: 0.3s;
+}
+
+.icon:hover {
+	opacity: 0.7;
+}
