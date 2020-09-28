@@ -149,7 +149,7 @@
 		-ms-transform: translateY(-50%);
 		vertical-align: middle;
 		z-index: 1;
-		transition: .3s ease;
+		transition: .1s ease;
 	}
 
 	#about-txt {
@@ -317,7 +317,7 @@
 		opacity: 0.95;
 		width: 300px;
 		height: auto;
-		transition: .3s ease;
+		transition: .1s ease;
 	}
 
 	#about-txt {
