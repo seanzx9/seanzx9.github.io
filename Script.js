@@ -24,7 +24,7 @@ window.onload = function () {
         "I'm a student at Stony Brook University.",
         "I major in Computer Engineering.",
         "My interest is in software development, specifically app and systems design.",
-        "But I'm always interested in exploring new things!",
+        "But I'm always interested in exploring more!",
         "Scroll down to check out some of my projects!"
     ];
     //about me pic and text
